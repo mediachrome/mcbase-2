@@ -1,8 +1,8 @@
-
 ; Theme Info -----------------------------------------------------------------
 ; required information about the theme
 
-name = Mediachrome base
+name = Mcbase
+version = 2.0
 description = Mediachrome base theme, being a mashup of Boron and Tao and Clean and etc.
 core = 7.x
 engine = phptemplate
@@ -68,8 +68,8 @@ settings[breadcrumb_home]      = 1
 settings[breadcrumb_trailing]  = 1
 settings[breadcrumb_title]     = 1
 settings[mcbase_rebuild_registry] = 1
-settings[mcbase_enable_960_grid] = 1
+settings[mcbase_enable_overlay_grid] = 1
 settings[mcbase_grid_colour] = dark
-settings[mcbase_960gs_default_state] = grid-disabled
+settings[mcbase_overlay_default_state] = grid-disabled
 
 

@@ -121,15 +121,15 @@ function mcbase_preprocess_html(&$vars) {
   $settings = array(
     'theme_path' => $base_path . $path_to_mcbase,
     'theme_key' => str_replace('_', '-', $theme_key),
-    'default_state' => theme_get_setting('mcbase_960gs_default_state'),
+    'default_state' => theme_get_setting('mcbase_overlay_default_state'),
     'grid_colour' => theme_get_setting('mcbase_grid_colour'),
-    'dev_mode' => theme_get_setting('mcbase_enable_960_grid'),
+    'dev_mode' => theme_get_setting('mcbase_enable_overlay_grid'),
   );
   
   // add the $settings array within the mcbase namespace to Drupal.settings
   drupal_add_js(array('mcbase' => $settings), 'setting');
   
-  if (theme_get_setting('mcbase_enable_960_grid')) {
+  if (theme_get_setting('mcbase_enable_overlay_grid')) {
     drupal_add_js($path_to_mcbase . '/js/mcbase.grid.js');
     drupal_add_css($path_to_mcbase . '/css/mcbase.grid.css');
   }
