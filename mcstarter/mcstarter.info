@@ -1,13 +1,14 @@
-name = Mediachrome starter
-description = Mediachrome starter theme
+name = Mcbase starter
+description = Mediachrome starter theme built upon Mcbase
 base theme = mcbase
 core = 7.x
 
 screenshot = images/screenshot.png
 
 ; stylesheets ----------------------------------------------------------------
-; use responsive.css to override the base theme page layout
 
+
+stylesheets[screen][] = css/layout.css
 stylesheets[screen][] = css/style.css
 stylesheets[screen][] = css/responsive.css
 ; stylesheets[screen][] = css/better-messages.css
@@ -56,7 +57,7 @@ settings[breadcrumb_home]      = 1
 settings[breadcrumb_trailing]  = 1
 settings[breadcrumb_title]     = 1
 settings[mcbase_rebuild_registry] = 1
-settings[mcbase_enable_960_grid] = 1
+settings[mcbase_enable_overlay_grid] = 1
 settings[mcbase_grid_colour] = dark
-settings[mcbase_960gs_default_state] = grid-disabled
+settings[mcbase_overlay_default_state] = grid-disabled
 
