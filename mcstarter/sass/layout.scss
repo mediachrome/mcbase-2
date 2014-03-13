@@ -1,0 +1,155 @@
+/**
+  * Border-box model
+  *
+  * This will probably bite me in the ass
+  */
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* hide any HRs used in the layout, but show them in main content */
+
+hr, .ahem, .skip-link {
+  display: none;
+}
+
+hr {
+  display: block;
+}
+
+html, body, #page {
+  height: 100%;
+}
+
+
+/**
+ * Holy Grail Layout =================================================
+ *
+ * ref: http://www.alistapart.com/articles/holygrail
+ * This layout takes advantage of negative margins to float the sidebars to
+ * either side of the main content. It also floats the navigation above the
+ * content, but you could just as easily absolutely position it.
+ * 
+ * LC stands for Left Column, RC for Right Column
+ * 
+ * Obvously, this layout is for left-to-right languages. For a
+ * right-to-left layout, just swap all the left and rights below.
+ */
+
+.page-wrapper, .page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  min-height: 100%;
+}
+
+/**
+ * Page width limiter =================================================
+ *
+ * Can be nested within major structural elements to allow full-width
+ * bleeds combined with a fixed page width. Set a width on this in your
+ * theme to get a consistent page width on major elements.
+ *
+ * See also the dimensions defined by the responsive design requirements
+ */
+
+.limiter {
+  width: 1140px;
+  margin: 0 auto;
+  &:after {
+  content: "";
+  display: table;
+  clear: both;  
+  }
+}
+
+/**
+ * Markup free clearing.
+ *
+ * @see http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+ */
+
+/* IE6 */
+
+* {
+  html .limiter {
+    height: 1%;
+  }
+  &:first-child + html .limiter {
+    min-height: 1%;
+  }
+}
+
+/* IE7 */
+
+#content, #sidebar-first, #sidebar-second {
+  float: left;
+}
+
+#main {
+  position: relative;
+  min-height: 450px;
+}
+
+#content {
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  padding: 0;
+}
+
+.no-sidebars #content {
+  float: none;
+}
+
+.sidebar-first #content .section {
+  margin-left: 33%;
+  /* LEFT value */
+}
+
+.sidebar-second #content .section {
+  margin-right: 33%;
+  /* RIGHT value */
+}
+
+.two-sidebars #content .section {
+  margin-left: 33%;
+  /* LEFT value */
+  margin-right: 33%;
+  /* RIGHT value */
+}
+
+#sidebar-first {
+  width: 33%;
+  /* LEFT value */
+  margin-right: -33%;
+  /* negative LEFT value */
+  margin-left: 0;
+}
+
+#sidebar-second {
+  width: 33%;
+  /* RIGHT value */
+  margin-left: -33%;
+  /* negative RIGHT value */
+  float: right;
+  margin-right: 0;
+}
+
+#footer {
+  clear: both;
+}
+
+/* Demo regions on the blocks page */
+
+.page-admin-structure-block-demo .region {
+  margin: -1px;
+  border: 1px solid lime;
+  background-color: rgba(10,255,0,0.4)
+}
