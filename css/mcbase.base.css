@@ -17,14 +17,14 @@ body {
 /**
  * Skip navigation ====================================================
  */
-#skip-link {
+.skip-link {
   position:absolute;
   display:block;
   }
 
-#skip-link a,
-#skip-link a:link,
-#skip-link a:visited {
+.skip-link a,
+.skip-link a:link,
+.skip-link a:visited {
   position:absolute;
   display:block;
   left:-10000px;
@@ -32,15 +32,15 @@ body {
   height:1px;
   }
 
-#skip-link a:hover,
-#skip-link a:active,
-#skip-link a:focus {
+.skip-link a:hover,
+.skip-link a:active,
+.skip-link a:focus {
   position:static;
   width:auto;
   height:auto;
   }
 
-#main-menu, #secondary-menu {
+.main-menu, .secondary-menu {
   margin: 0;
   padding: 0;
 }
@@ -447,10 +447,12 @@ input[disabled]:hover {
   color: #222;
 }
 
-
-
-.tabs ul.secondary {
+.tabs ul.secondary li {
   margin: 5px 10px;
+  background-color: #cdcdcd;
+  padding: 3px;
+  border-radius: 7px;
+  border: 1px solid #cdcdcd;
 }
 
 /* tabs keyline */

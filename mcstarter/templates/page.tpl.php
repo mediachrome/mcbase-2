@@ -59,23 +59,23 @@
  */
 ?>
 <!-- mcstarter page.tpl.php -->
-<div id="page-wrapper"><div id="page">
+<div class="page-wrapper">
 
-<header id="header" role="navigation"><div class="limiter">
+<header class="header" role="navigation"><div class="limiter">
 
 <?php if ($main_menu): ?>
-<p id="skip-link"><em><a href="#navigation">Skip to Navigation</a></em><!--  &darr; --></p>
+<p class="skip-link"><em><a href="#navigation">Skip to Navigation</a></em><!--  &darr; --></p>
 <?php endif; ?>
 
 <?php print render($page['header_first']); ?>
 <?php print render($page['header_second']); ?>
 
-</div></header> <!-- /.section, /#header -->
+</div></header> <!-- /.section, /.header -->
   
-<div id="branding" role="banner"><div class="limiter">
+<div class="branding" role="banner"><div class="limiter">
 
 <?php if ($logo): ?>
-<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo">
 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
 </a>
 <?php endif; ?>
@@ -103,15 +103,11 @@
 </div> <!-- /#name-and-slogan -->
 <?php endif; ?>
    
-</div></div> <!-- /.limiter, /#branding -->
+</div></div> <!-- /.limiter, /.branding -->
 
 <?php if ($main_menu): ?>
 
 <nav id="navigation" role="navigation"><div class="limiter">
-
-  <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible', 'menu-title'))));  ?>
-
-  <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Secondary menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
 
 <?php if ($breadcrumb): ?>
   <div id="breadcrumb"><?php print $breadcrumb; ?></div>
@@ -208,4 +204,4 @@
 
 </div></div> <!-- /.limiter, /#footer-wrapper -->
 
-</div></div> <!-- /#page, /#page-wrapper -->
+</div> <!-- /.page-wrapper -->
