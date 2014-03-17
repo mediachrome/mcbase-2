@@ -76,7 +76,8 @@
 
 <?php if ($logo): ?>
 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo">
-<img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+<img src="/<?php print $directory . 'logo.svg'; ?>" alt="<?php print t('Home'); ?>" />
+<?php /* <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> */ ?>
 </a>
 <?php endif; ?>
 
