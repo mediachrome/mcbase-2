@@ -105,14 +105,12 @@
    
 </div></div> <!-- /.limiter, /.branding -->
 
-<?php if ($main_menu): ?>
-
+<?php if ($page['navigation']): ?>
 <nav id="navigation" role="navigation"><div class="limiter">
-
+<?php print render($page['navigation']); ?>
 <?php if ($breadcrumb): ?>
   <div id="breadcrumb"><?php print $breadcrumb; ?></div>
 <?php endif; ?>
-
 </div></nav> <!-- /.limiter, /#navigation -->
 <?php endif; ?>
 

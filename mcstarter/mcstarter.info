@@ -21,6 +21,7 @@ stylesheets[print][] = css/print.css
 regions[header_first] = Header first
 regions[header_second] = Header second
 regions[branding] = Branding
+regions[navigation] = Navigation
 regions[content_top] = Content top
 regions[content] = Content
 regions[content_bottom] = Content bottom
