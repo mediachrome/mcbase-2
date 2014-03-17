@@ -59,19 +59,19 @@
  */
 ?>
 <!-- mcbase page.tpl.php -->
-<div id="page-wrapper"><div id="page">
+<div class="page-wrapper"><div class="page">
 
-<header id="header" role="navigation"><div class="limiter">
+<header role="navigation"><div class="limiter">
 
 <?php if ($main_menu): ?>
-<p id="skip-link"><em><a href="#navigation">Skip to Navigation</a></em><!--  &darr; --></p>
+<p class="skip-link"><em><a href="#navigation">Skip to Navigation</a></em><!--  &darr; --></p>
 <?php endif; ?>
 
 <?php print render($page['header']); ?>
 
-</div></header> <!-- /.section, /#header -->
+</div></header> <!-- /.limiter /header -->
   
-<div id="branding" role="banner"><div class="limiter">
+<div class="branding" role="banner"><div class="limiter">
 
 <?php if ($logo): ?>
 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
