@@ -28,10 +28,10 @@ strong {
 /* Page 
 -------------------------------------------*/
 .page-wrapper {
-  background-color: #ddd; }
+  background-color: transparent; }
 
 .main-wrapper {
-  background-color: #fff; }
+  background-color: transparent; }
 
 .block {
   margin-bottom: 20px; }
@@ -54,19 +54,17 @@ strong {
 
 /* Branding
 -------------------------------------------*/
-.branding {
-  background: -webkit-linear-gradient(#eeeeee 0%, #dddddd 100%); }
-  .branding .limiter {
-    padding-top: 20px;
-    padding-bottom: 20px; }
-  .branding:after {
-    position: absolute;
-    width: 100%;
-    height: 16px;
-    background: transparent url(graphics/shadow-cast-down.png) repeat-x left top;
-    z-index: 2;
-    display: block;
-    content: " "; }
+.branding .limiter {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+.branding:after {
+  position: absolute;
+  width: 100%;
+  height: 16px;
+  background: transparent url(graphics/shadow-cast-down.png) repeat-x left top;
+  z-index: 2;
+  display: block;
+  content: " "; }
 
 /* Navigation
 -------------------------------------------*/
