@@ -546,6 +546,9 @@ body#tinymce {
 
 div.status {
   background-color: #CDFFD1;
+  border: 0;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 div.help {
