@@ -542,13 +542,13 @@ body#tinymce {
 
 .message-wrapper {
   padding: 10px 0;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 div.status {
   background-color: #CDFFD1;
   border: 0;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 div.help {
@@ -568,6 +568,11 @@ tr.error {
   background-color: #FCC;
   color: #333;
 }
+
+div.messages, div.status, div.warning, div.notice, div.help, div.error {
+  border: 0;
+}
+
 
 /**
  * @file
