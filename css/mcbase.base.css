@@ -406,7 +406,7 @@ input[disabled]:hover {
 .tabs ul.primary {
   padding: 10px 10px 0;
   margin-bottom: 5px;
-  background-color: #cdcdcd;
+  background-color: rgba(220,220,220, 0.7);
 }
 
 
@@ -423,7 +423,7 @@ input[disabled]:hover {
 }
 
 .tabs ul.primary li.active {
-  background-color: #fff;
+  background-color: rgba(254,254,254, 0.7);
 }
 
 .tabs ul.primary li.active a {
