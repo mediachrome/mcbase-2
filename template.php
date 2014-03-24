@@ -85,7 +85,7 @@ function taxonomy_node_get_terms($node, $key = 'tid') {
             $terms[$node->vid][$key][$term->$key] = $term;
         }
     }
-     dpm($terms[$node->vid][$key]);
+    // dpm($terms[$node->vid][$key]);
     return $terms[$node->vid][$key];
 }
 
