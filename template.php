@@ -85,7 +85,7 @@ function taxonomy_node_get_terms($node, $key = 'tid') {
             $terms[$node->vid][$key][$term->$key] = $term;
         }
     }
-    // dpm($terms[$node->vid][$key]);
+     dpm($terms[$node->vid][$key]);
     return $terms[$node->vid][$key];
 }
 
@@ -144,7 +144,7 @@ function mcbase_preprocess_html(&$vars) {
   if(arg(0)=='node' && is_numeric(arg(1))) {
     $node = node_load(arg(1)); 
     $results = taxonomy_node_get_terms($node);
-    // dpm($results);
+    // print_r($results);
     if(is_array($results)) {
       foreach ($results as $item) {
         $vars['classes_array'][] = "taxonomy-".strtolower(drupal_clean_css_identifier($item->name));
@@ -152,39 +152,6 @@ function mcbase_preprocess_html(&$vars) {
     }
   }
 
-  
-
-/*
- // Classes for body element. Allows advanced theming based on context
-  // (home page, node of certain type, etc.)
-  if (!$vars['is_front']) {
-    // Add unique class for each page.
-    $path = drupal_get_path_alias($_GET['q']);
-    // Add unique class for each website section.
-    list($section, ) = explode('/', $path, 2);
-    if (arg(0) == 'node') {
-      if (arg(1) == 'add') {
-        $section = 'node-add';
-      }
-      elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
-        $section = 'node-' . arg(2);
-      }
-      
-      // Taxonomy
-      $node = node_load(arg(1));
-      $results = field_view_field('node', $node, 'field_tags', array('default'));
-      foreach ($results as $key => $result) {
-        if (is_numeric($key)) {
-         // Call drupal_html_class to make safe for a css class (remove spaces, invalid characters)
-        $vars['classes_array'][] = "taxonomy-" . strtolower(drupal_html_class( $result['#title']) );
-        // Add taxonomy ID. This will allow targeting of the taxonomy class even if the title changes
-        $vars['classes_array'][] = "taxonomy-id-" . $result['#options']['entity']->tid  ;
-        }
-      }      
-    }
-    $vars['classes_array'][] = drupal_html_class('section-' . $section);
-  }
-*/
 
   // Store the menu item since it has some useful information.
   $vars['menu_item'] = menu_get_item();
