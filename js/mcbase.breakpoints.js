@@ -1,13 +1,18 @@
 (function ($) {
 
-  Drupal.behaviors.mcbase_responsive = {
-    
-    attach: function(context, settings) {
+  Drupal.behaviors.mcbase_breakpoints = {
+      
+      attach: function(context, settings) {
+      
+      $('body').prepend('<div id="responsive-indicator"><span class="max-1140">Max 1140</span><span class="max-960">Max 960</span><span class="max-800">Max 800</span><span class="max-768">Max 768</span><span class="max-600">Max 600</span><span class="max-480">Max 480</span><span class="max-320">Max 320</span>');
+
    
-      // detect window size from value set by CSS
-      // with thanks to Matt Wilcox for the window.resize stuff
-      // http://mattwilcox.net/archive/entry/id/1088/
-      // IE < 9 doesn't use getComputedStyle so 
+      /**
+       * detect window size from value set by CSS
+       * with thanks to Matt Wilcox for the window.resize stuff
+       * http://mattwilcox.net/archive/entry/id/1088/
+       * IE < 9 doesn't use getComputedStyle so 
+       */
       
       if(window.getComputedStyle) {
         var dev_mode = Drupal.settings.mcbase.dev_mode;
@@ -49,18 +54,7 @@
   
               if (new_size === 'tablet') {}
               
-              if (new_size === 'phone') {
-                // add an element-invisible class to the menu 
-                $('#navigation .limiter').addClass('phone-navigation');
-                $('#main-menu').addClass('hidden-menu');              
-                // add menu button id to the nav title
-                $('#navigation h2.menu-title').removeClass('element-invisible');
-                $('#navigation h2.menu-title').attr('id', 'menu-toggle');
-                // set a toggle action on the nav title to hide and show the menu */
-                $('#menu-toggle').bind('click', function(){
-                  $("#main-menu").toggleClass('hidden-menu');
-                });
-              }
+              if (new_size === 'phone') {}
               
               current_size = new_size;
               // if we're in development mode, print this out somewhere we can see

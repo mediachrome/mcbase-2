@@ -112,7 +112,7 @@ function mcbase_preprocess_html(&$vars) {
     $vars['rdf']->profile = '';
   }
   
-// prep the scripts array for grid overlay
+// prep the scripts array for grid overlay and breakpoints
   global $theme_key;
   $base_path = base_path();
   $path_to_mcbase = drupal_get_path('theme', 'mcbase');
@@ -124,6 +124,7 @@ function mcbase_preprocess_html(&$vars) {
     'default_state' => theme_get_setting('mcbase_overlay_default_state'),
     'grid_colour' => theme_get_setting('mcbase_grid_colour'),
     'dev_mode' => theme_get_setting('mcbase_enable_overlay_grid'),
+    'breakpoints' => theme_get_setting('mcbase_display_breakpoints'),
   );
   
   // add the $settings array within the mcbase namespace to Drupal.settings
@@ -132,6 +133,10 @@ function mcbase_preprocess_html(&$vars) {
   if (theme_get_setting('mcbase_enable_overlay_grid')) {
     drupal_add_js($path_to_mcbase . '/js/mcbase.grid.js');
     drupal_add_css($path_to_mcbase . '/css/mcbase.grid.css');
+  }
+  if (theme_get_setting('mcbase_display_breakpoints')) {
+    drupal_add_js($path_to_mcbase . '/js/mcbase.breakpoints.js');
+    drupal_add_css($path_to_mcbase . '/css/mcbase.breakpoints.css');
   }
   
   // Taxonomy classes for body 
@@ -146,6 +151,8 @@ function mcbase_preprocess_html(&$vars) {
       }
     }
   }
+
+  
 
 /*
  // Classes for body element. Allows advanced theming based on context
@@ -207,6 +214,7 @@ function mcbase_preprocess_page(&$vars, $hook) {
   if (isset($vars['node']->type)) {
     $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
   }
+  
 }
 
 

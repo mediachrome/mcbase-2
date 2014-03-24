@@ -21,7 +21,7 @@ stylesheets[screen][] = css/mcbase.maintenance.css
 stylesheets[print][]  = css/mcbase.print.css
 
 ; Scripts  ---------------------------------------------------------------
-scripts[] = js/mcbase.responsive.js 
+; scripts[] = js/mcbase.responsive.js 
 
 
 ; Regions --------------------------------------------------------------------
@@ -67,6 +67,7 @@ settings[breadcrumb_home]      = 1
 settings[breadcrumb_trailing]  = 1
 settings[breadcrumb_title]     = 1
 settings[mcbase_rebuild_registry] = 1
+settings[mcbase_display_breakpoints] = 1
 settings[mcbase_enable_overlay_grid] = 1
 settings[mcbase_grid_colour] = dark
 settings[mcbase_overlay_default_state] = grid-disabled

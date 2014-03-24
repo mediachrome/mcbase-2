@@ -57,6 +57,14 @@ function mcbase_form_system_theme_settings_alter(&$form, &$form_state) {
   '#default_value'  => theme_get_setting('mcbase_rebuild_registry'),
   '#description'    => t('During theme development, it can be very useful to continuously <a href="!link">rebuild the theme registry</a>. WARNING: this is a huge performance penalty and must be turned off on production websites.', array('!link' => 'http://drupal.org/node/173880#theme-registry')),  
   );
+  
+  $form['themedev']['mcbase_display_breakpoints'] = array(
+  '#type'           => 'checkbox',
+  '#title'          => t('Display preset breakpoints'),
+  '#default_value'  => theme_get_setting('mcbase_display_breakpoints'),
+  '#description'    => t('Display preset breakpoints as defined in CSS and viewport'),
+  );
+
 
   $form['themedev']['mcbase_enable_overlay_grid'] = array(
   '#type'           => 'checkbox',

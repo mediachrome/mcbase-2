@@ -1,0 +1,104 @@
+/* Leave a trail for javascript */
+body:after {
+  content: 'unlimited';
+  display: none;
+}
+
+@media screen and (max-width: 1140px) {
+  
+  /* Leave a trail for javascript */
+  body:after {
+    content: 'widescreen';
+    display: none;
+  } 
+}
+
+@media screen and (max-width: 960px) {
+  
+  /* Leave a trail for javascript */
+  body:after {
+    content: 'standard';
+    display: none;
+  } 
+}
+
+@media screen and (max-width: 780px)  {
+
+  /* Leave a trail for javascript */
+  body:after {
+    content: 'tablet';
+    display: none;
+  } 
+}
+
+@media screen and (max-width: 480px) {
+    
+  /* Leave a trail for javascript */
+    body:after {
+    content: 'phone';
+    display: none;
+  } 
+} 
+
+/* Responsive indicator */
+
+#responsive-indicator {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  position: fixed;
+  font-size: 14px;
+  z-index: 200;
+  padding: 0.25em 0.5em;
+  background-color: rgba(51,51,51,0.8);
+  display: block;
+  border-radius: 0.5em;
+  outline: 0;
+  color: #ccc;
+}
+
+#responsive-indicator {
+  bottom: .5em;
+  left: .5em;
+}
+
+#responsive-indicator span{
+  display: none;
+}
+
+@media screen and (max-width: 1140px) {
+  #responsive-indicator span.max-1140 {display: block }
+}
+
+@media screen and (max-width: 960px) {
+  #responsive-indicator span.max-960 {display: block }
+  #responsive-indicator span.max-1140 {display: none }
+}
+
+@media screen and (max-width: 800px) {
+  #responsive-indicator span.max-800 {display: block }
+  #responsive-indicator span.max-960 {display: none }
+}
+
+@media screen and (max-width: 768px) {
+  #responsive-indicator span.max-768 {display: block }
+  #responsive-indicator span.max-800 {display: none }
+}
+
+@media screen and (max-width: 600px) {
+  #responsive-indicator span.max-600 {display: block }
+  #responsive-indicator span.max-768 {display: none }
+}
+
+
+@media screen and (max-width: 480px) {
+  #responsive-indicator span.max-480 {display: block }
+  #responsive-indicator span.max-600 {display: none }
+}
+
+@media screen and (max-width: 320px) {
+  #responsive-indicator span.max-320 {display: block }
+  #responsive-indicator span.max-480 {display: none }
+}
+
+

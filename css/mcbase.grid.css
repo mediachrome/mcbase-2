@@ -31,7 +31,7 @@ background-image: url(graphics/grid-light.png);
   display: block;
 }
 
-#mcbase-grid-toggle, #responsive-indicator {
+#mcbase-grid-toggle {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -70,20 +70,7 @@ border-right: 1px dotted #999;
 margin-left: -571px;
 }
 
-/* Responsive indicator */
-
-#responsive-indicator {
-  bottom: .5em;
-  left: .5em;
-}
-
-
-#responsive-indicator span{
-  display: none;
-}
-
 @media screen and (max-width: 1140px) {
-  #responsive-indicator span.max-1140 {display: block }
   img#mcbase-grid {
     margin-left: 0;
     border-left: 0;
@@ -93,37 +80,3 @@ margin-left: -571px;
     background-size: contain;
   }
 }
-
-
-@media screen and (max-width: 960px) {
-  #responsive-indicator span.max-960 {display: block }
-  #responsive-indicator span.max-1140 {display: none }
-}
-
-@media screen and (max-width: 800px) {
-  #responsive-indicator span.max-800 {display: block }
-  #responsive-indicator span.max-960 {display: none }
-}
-
-@media screen and (max-width: 768px) {
-  #responsive-indicator span.max-768 {display: block }
-  #responsive-indicator span.max-800 {display: none }
-}
-
-@media screen and (max-width: 600px) {
-  #responsive-indicator span.max-600 {display: block }
-  #responsive-indicator span.max-768 {display: none }
-}
-
-
-@media screen and (max-width: 480px) {
-  #responsive-indicator span.max-480 {display: block }
-  #responsive-indicator span.max-600 {display: none }
-}
-
-@media screen and (max-width: 320px) {
-  #responsive-indicator span.max-320 {display: block }
-  #responsive-indicator span.max-480 {display: none }
-}
-
-
