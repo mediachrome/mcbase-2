@@ -56,18 +56,12 @@ body:after {
 }
 
 @media screen and (max-width: 1140px) {
-  body:after {
-    content: 'widescreen';
-    display: none;
-  }
+  /* widescreen */
 }
 
 @media screen and (max-width: 960px) {
-  /* Leave a trail for javascript */
-  body:after {
-    content: 'standard';
-    display: none;
-  }
+  /* standard' */
+
   /* scale columns 
    * 
    * If the limiter is not defining the outside margin as well
@@ -83,11 +77,8 @@ body:after {
 }
 
 @media screen and (max-width: 800px) {
-  /* Leave a trail for javascript */
-  body:after {
-    content: 'tablet';
-    display: none;
-  }
+  /* tablet */
+
   #page-wrapper {
     width: 100%;
     overflow: hidden;
@@ -127,11 +118,8 @@ body:after {
 }
 
 @media screen and (max-width: 480px) {
-  /* Leave a trail for javascript */
-  body:after {
-    content: 'phone';
-    display: none;
-  }
+  /* phone */
+
   #page-wrapper {
     width: 100%;
     margin: 0 auto;
