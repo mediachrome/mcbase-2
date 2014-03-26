@@ -8,11 +8,47 @@ body {
 #mcbase-grid {
   position: fixed;
   left: 50%;
-  margin-left: -570px;
-  width: 1140px;
   height: 100%;
   background: transparent url(graphics/grid/grid-dark.png) repeat-y center top;
 }
+
+img#mcbase-grid {
+z-index: 99;
+}
+
+/* 1140 */
+#mcbase-grid {
+  margin-left: -570px;
+  width: 1140px;
+}
+
+@media screen and (max-width: 1140px) {
+  img#mcbase-grid {
+    margin-left: 0;
+    left: 0;
+    width: 100%;
+    background-size: contain;
+  }
+}
+
+/* 960 */
+
+/*
+#mcbase-grid {
+  margin-left: -480px;
+  width: 960px;
+}
+
+@media screen and (max-width: 960px) {
+  img#mcbase-grid {
+    margin-left: 0;
+    left: 0;
+    width: 100%;
+    background-size: contain;
+  }
+}
+*/
+
 
 #mcbase-grid.dark {
 background-image: url(graphics/grid/grid-dark.png);
@@ -21,7 +57,6 @@ background-image: url(graphics/grid/grid-dark.png);
 #mcbase-grid.light {
 background-image: url(graphics/grid/grid-light.png);
 }
-
 
 #mcbase-grid.grid-disabled {
   display: none;
@@ -47,8 +82,9 @@ background-image: url(graphics/grid/grid-light.png);
 }
 
 #mcbase-grid-toggle {
-  bottom: 4em;
+  bottom: 0.5em;
   right: 0.5em;
+  height: 3em;
 }
 
 #mcbase-grid-toggle.grid-enabled {
@@ -61,22 +97,3 @@ background-image: url(graphics/grid/grid-light.png);
   opacity: 0.4;
 }
 
-/* Make the layout grid transparent and overlay it on the top */
-
-img#mcbase-grid {
-z-index: 99;
-border-left: 1px dotted #999;
-border-right: 1px dotted #999;
-margin-left: -571px;
-}
-
-@media screen and (max-width: 1140px) {
-  img#mcbase-grid {
-    margin-left: 0;
-    border-left: 0;
-    border-right: 0;
-    left: 0;
-    width: 100%;
-    background-size: contain;
-  }
-}
