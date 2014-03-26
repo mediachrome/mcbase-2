@@ -10,8 +10,9 @@
     alert('Mcbase Theme Key:' + Drupal.settings.mcbase.theme_key);
     alert('Mcbase default state:' + Drupal.settings.mcbase.default_state);
     */
+    
 
-      var $grid_image = Drupal.settings.mcbase.theme_path + '/images/blank.png';
+      var $grid_image = Drupal.settings.basePath + Drupal.settings.pathToTheme + '/images/blank.png';
       var $theme_key = Drupal.settings.mcbase.theme_key;
       var $default_state = Drupal.settings.mcbase.default_state;
       var $grid_colour = Drupal.settings.mcbase.grid_colour

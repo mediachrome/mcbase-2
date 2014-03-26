@@ -130,13 +130,19 @@ function mcbase_preprocess_html(&$vars) {
   // add the $settings array within the mcbase namespace to Drupal.settings
   drupal_add_js(array('mcbase' => $settings), 'setting');
   
+  // Breakpoints and overlays are site-specific. 
+  // Load them from the child theme
+  
+  $child_theme_path = path_to_theme();
+  drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
+  
   if (theme_get_setting('mcbase_enable_overlay_grid')) {
-    drupal_add_js($path_to_mcbase . '/js/mcbase.grid.js');
-    drupal_add_css($path_to_mcbase . '/css/mcbase.grid.css');
+    drupal_add_js($child_theme_path . '/js/grid.js');
+    drupal_add_css($child_theme_path . '/css/grid.css');
   }
   if (theme_get_setting('mcbase_display_breakpoints')) {
-    drupal_add_js($path_to_mcbase . '/js/mcbase.breakpoints.js');
-    drupal_add_css($path_to_mcbase . '/css/mcbase.breakpoints.css');
+    drupal_add_js($child_theme_path . '/js/breakpoints.js');
+    drupal_add_css($child_theme_path . '/css/breakpoints.css');
   }
   
   // Taxonomy classes for body 

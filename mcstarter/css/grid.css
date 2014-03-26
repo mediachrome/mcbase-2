@@ -11,15 +11,15 @@ body {
   margin-left: -570px;
   width: 1140px;
   height: 100%;
-  background: transparent url(graphics/grid-dark.png) repeat-y center top;
+  background: transparent url(graphics/grid/grid-dark.png) repeat-y center top;
 }
 
 #mcbase-grid.dark {
-background-image: url(graphics/grid-dark.png);
+background-image: url(graphics/grid/grid-dark.png);
 }
 
 #mcbase-grid.light {
-background-image: url(graphics/grid-light.png);
+background-image: url(graphics/grid/grid-light.png);
 }
 
 
