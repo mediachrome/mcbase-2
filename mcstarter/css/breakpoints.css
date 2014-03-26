@@ -43,8 +43,8 @@ body:after {
 /* Responsive indicator */
 
 #responsive-indicator {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   position: fixed;
   font-size: 14px;
@@ -54,7 +54,8 @@ body:after {
   display: block;
   border-radius: 0.5em;
   outline: 0;
-  color: #ccc;
+  color: #ddd;
+  height: 3em;
 }
 
 #responsive-indicator {
@@ -100,5 +101,3 @@ body:after {
   #responsive-indicator span.max-320 {display: block }
   #responsive-indicator span.max-480 {display: none }
 }
-
-

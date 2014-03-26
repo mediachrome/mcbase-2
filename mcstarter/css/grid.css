@@ -67,8 +67,8 @@ background-image: url(graphics/grid/grid-light.png);
 }
 
 #mcbase-grid-toggle {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   position: fixed;
   font-size: 14px;
@@ -78,7 +78,7 @@ background-image: url(graphics/grid/grid-light.png);
   display: block;
   border-radius: 0.5em;
   outline: 0;
-  color: #ccc;
+  color: #ddd;
 }
 
 #mcbase-grid-toggle {
