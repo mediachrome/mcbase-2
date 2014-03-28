@@ -176,14 +176,12 @@ h6 a {
 .node .links,
 .node .links li,
 .node .item-list ul,
-.node .item-list li {
+.node .item-list li,
+.item-list ul li {
   margin:0px;
   padding:0px;
   list-style:none;
   }
-
-
-
 
 /* Testing in styleguide */
 

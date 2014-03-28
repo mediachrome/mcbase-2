@@ -368,7 +368,7 @@ sub {
 ul,
 ol {
     margin-left: 0;
-    padding: 0 0 0 20px;
+    padding: 0;
 }
 
 dd {
