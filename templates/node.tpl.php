@@ -99,7 +99,7 @@
 print t('Submitted by !username on !datetime',
               array('!username' => $name, '!datetime' => $date));
 */
-          print date( "F j Y",$node->created);
+          print date( "j F Y",$node->created);
 
           ?>
         </p>
