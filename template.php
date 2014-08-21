@@ -112,6 +112,7 @@ function mcbase_preprocess_html(&$vars) {
     $vars['rdf']->profile = '';
   }
   
+  
 // prep the scripts array for grid overlay and breakpoints
   global $theme_key;
   $base_path = base_path();
