@@ -300,62 +300,11 @@ table.grid-6 td { width:16.6%; }
 table.grid-7 td { width:14.2%; }
 table.grid-8 td { width:12.5%; }
 
-
 /**
- * Some Mediachrome defaults 
- *
+ * Buttons style from the elegant 'seven' theme
  *
  */
 
-a.button,
-input.form-submit,
-input.teaser-button,
-input[type=button] {
-  background-color: #3ca1dc;
-  border: 1px solid #3ca1dd;
-  padding: 4px 12px;
-  margin: 10px 5px 10px 0;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  background-image: url(graphics/button-bg-v2.png);
-  background-repeat: no-repeat;
-  background-position: 0 center;
-  -webkit-box-shadow:rgba(0,0,0,0.5) 3px 3px 3px;
-  -moz-box-shadow:rgba(0,0,0,0.5) 3px 3px 3px;
-  -o-box-shadow: rgba(0,0,0,0.5) 3px 3px 3px;
-  box-shadow:rgba(0,0,0,0.5) 3px 3px 3px;
-  text-shadow: rgba(255,255,255,1) 1px 1px 2px;
-  font-weight: normal;
-}
-
-input[disabled] {
-  background-image: none;
-  background-color: #ededed;
-  border: 1px solid #ededed;
-}
-
-/* Views uses little buttons in some of its dialogues */
-#views-ajax-pad .form-buttons .form-submit {
-  font-size: 0.8em;
-  padding: 2px 5px;
-}
-
-input#edit-preview {
-  background-position: -250px center;
-  border-color: #98e893;
-}
-
-input#edit-delete, input#edit-remove {
-  background-position: -500px center;
-  border-color: #f54857;
-}
-
-input#edit-cancel {
-  background-position: -750px center;
-  border-color: #ddd;
-}
 
 a.button:hover,
 input.form-submit:hover,
@@ -392,6 +341,70 @@ input[disabled]:hover {
   -webkit-box-shadow:rgba(0,0,0,0.5) 3px 3px 3px;
   -moz-box-shadow:rgba(0,0,0,0.5) 3px 3px 3px;
   box-shadow:rgba(0,0,0,0.5) 3px 3px 3px;
+}
+
+input.form-submit,
+a.button {
+  cursor: pointer;
+  padding: 4px 17px;
+  margin-bottom: 1em;
+  margin-right: 1em; /* LTR */
+  color: #5a5a5a;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.077em;
+  border: 1px solid #e4e4e4;
+  border-bottom: 1px solid #b4b4b4;
+  border-left-color: #d2d2d2;
+  border-right-color: #d2d2d2;
+  background: url(graphics/buttons.png) 0 0 repeat-x;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+a.button:link,
+a.button:visited,
+a.button:hover,
+a.button:active {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+input.form-submit:active {
+  background: #666;
+  color: #fff;
+  border-color: #555;
+  text-shadow: #222 0 -1px 0;
+}
+input.form-button-disabled,
+input.form-button-disabled:active {
+  background: #eee none;
+  border-color: #eee;
+  text-shadow: none;
+  color: #999;
+}
+input.form-autocomplete,
+input.form-text,
+input.form-file,
+textarea.form-textarea,
+select.form-select {
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-top-color: #999;
+  background: #fff;
+  color: #333;
+}
+input.form-text:focus,
+input.form-file:focus,
+textarea.form-textarea:focus,
+select.form-select:focus {
+  color: #000;
+  border-color: #ace;
+}
+html.js input.form-autocomplete {
+  background-position: 100% 4px;
+}
+html.js input.throbbing {
+  background-position: 100% -16px;
 }
 
 

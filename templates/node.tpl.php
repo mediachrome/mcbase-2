@@ -90,10 +90,17 @@
       <?php print render($title_suffix); ?>
 
       <?php if ($display_submitted): ?>
+      
         <p class="submitted">
           <?php
-            print t('Submitted by !username on !datetime',
+            // we rarely want to display the author
+            
+            /*
+print t('Submitted by !username on !datetime',
               array('!username' => $name, '!datetime' => $date));
+*/
+          print date( "j F Y",$node->created);
+
           ?>
         </p>
       <?php endif; ?>
