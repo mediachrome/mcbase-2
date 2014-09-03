@@ -26,8 +26,31 @@ input, select, textarea, body {
     margin: 0px 0px 1.475em;
     /* margin: 0px 0px .875em;  */
   }
-  dd + dt {
-    margin-top: 1.475em;
+  
+  /* Standard preset for Term and Definition lists */
+
+ dl {
+  width: 360px;
+  margin-left: 140px;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;  
+    }
+  dt {
+    font-weight: 700;
+    float: left;
+    clear: left;
+    width: 130px;
+    margin: 0 0 1em -140px;
+    }
+  &:after { content: ":";}
+  dd {
+    float: left;
+    margin: 0 0 1em 0;
+    display: block;
+    width: 360px;
+    }
   }
 }
 

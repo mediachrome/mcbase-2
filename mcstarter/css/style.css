@@ -14,13 +14,33 @@ input, select, textarea, body {
 #content .node {
   line-height: 1.475em; }
 
-.node pre, .node blockquote, .node div.codeblock {
-  line-height: 1.475em; }
-.node p, .node ul, .node ol, .node dl, .node pre, .node div.codeblock, .node blockquote {
-  margin: 0px 0px 1.475em;
-  /* margin: 0px 0px .875em;  */ }
-.node dd + dt {
-  margin-top: 1.475em; }
+.node {
+  /* Standard preset for Term and Definition lists */ }
+  .node pre, .node blockquote, .node div.codeblock {
+    line-height: 1.475em; }
+  .node p, .node ul, .node ol, .node dl, .node pre, .node div.codeblock, .node blockquote {
+    margin: 0px 0px 1.475em;
+    /* margin: 0px 0px .875em;  */ }
+  .node dl {
+    width: 360px;
+    margin-left: 140px; }
+    .node dl:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .node dl dt {
+      font-weight: 700;
+      float: left;
+      clear: left;
+      width: 130px;
+      margin: 0 0 1em -140px; }
+    .node dl:after {
+      content: ":"; }
+    .node dl dd {
+      float: left;
+      margin: 0 0 1em 0;
+      display: block;
+      width: 360px; }
 
 strong {
   font-weight: 700; }
