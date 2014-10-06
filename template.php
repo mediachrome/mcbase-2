@@ -91,25 +91,30 @@ function taxonomy_node_get_terms($node, $key = 'tid') {
 
  
 function mcbase_preprocess_html(&$vars) {
-
-// explicitly declare the object
-// http://drupal.org/node/1065270#comment-4107538
- 
-  $vars['rdf'] = new stdClass;
   
-// Uses RDFa attributes if the RDF module is enabled
-// Lifted from Adaptivetheme for D7, full credit to Jeff Burnz
-// ref: http://drupal.org/node/887600
-  if (module_exists('rdf')) {
-    $vars['doctype'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">' . "\n";
-    $vars['rdf']->version = 'version="HTML+RDFa 1.1"';
-    $vars['rdf']->namespaces = $vars['rdf_namespaces'];
-    $vars['rdf']->profile = ' profile="' . $vars['grddl_profile'] . '"';
-  } else {
-    $vars['doctype'] = '<!DOCTYPE html>' . "\n";
-    $vars['rdf']->version = '';
-    $vars['rdf']->namespaces = '';
-    $vars['rdf']->profile = '';
+  // Mcbase used the Doctype and RDFa preprocessing from Boron, which was in turn lifted from AdaptiveTheme (AT).
+  
+  // Boron has not been updated since 
+
+  // DOCTYPE
+  // AT no longer uses doctype switching or $rdf_profile, these maintain
+  // backwards compatibility with pre 7.x-2.1 versions of html.tpl.php
+  $vars['doctype'] = '<!DOCTYPE html>' . "\n";
+  $vars['rdf_profile'] = '';
+
+  // Use a proper attributes array for the html attributes.
+  // You can add more attributes to the html elment, for example in a sub-theme you can do this:
+  // $vars['html_attributes_array']['xmlns:og'][] = 'http://opengraphprotocol.org/schema/';
+  $vars['html_attributes_array']['lang'][] = $language->language;
+  $vars['html_attributes_array']['dir'][] = $language->dir;
+
+  // Convert RDF Namespaces into structured data using drupal_attributes.
+  $vars['rdf_namespaces'] = array();
+  if (function_exists('rdf_get_namespaces')) {
+    foreach (rdf_get_namespaces() as $prefix => $uri) {
+      $prefixes[] = $prefix . ': ' . $uri;
+    }
+    $vars['rdf_namespaces_array']['prefix'] = implode(' ', $prefixes);
   }
   
   
