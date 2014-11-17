@@ -71,12 +71,13 @@ height: 100%;
  */
  
 .limiter:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+	content: "";
+	display: table;
+	clear: both;
+
 }
+
+
 /* IE6 */
 * html .limiter {
   height: 1%;
