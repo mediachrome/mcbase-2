@@ -1,0 +1,64 @@
+.social-icons, .social-icons li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.social-icons li {
+  float: left;
+  margin: 5px;
+}
+
+
+.social-icons li a {
+  display: block;
+  height: 30px;
+  width: 30px;
+  text-indent: -999em;
+  background: transparent url(graphics/social-icons.png) no-repeat left top;
+}
+
+/* Grey */ 
+.social-icons .twitter a      		{background-position: 0 0}
+.social-icons .facebook a     		{background-position: -40px 0}
+.social-icons .dribbble a 				{background-position: -80px 0}
+.social-icons .github a    				{background-position: -120px 0}
+.social-icons .youtube a    			{background-position: -160px 0}
+.social-icons .vimeo a     				{background-position: -200px 0}
+.social-icons .neilorangepeel a   {background-position: -240px 0}
+.social-icons .instagram a     		{background-position: -280px 0}
+.social-icons .pinterest a     		{background-position: -320px 0}
+.social-icons .wordpress a     		{background-position: 0 -40px}
+.social-icons .rss a     					{background-position: -40px -40px}
+.social-icons .googleplus a     	{background-position: -80px -40px}
+.social-icons .flickr a     			{background-position: -120px -40px}
+.social-icons .linkedin a     		{background-position: -160px -40px}
+.social-icons .skype a     				{background-position: -200px -40px}
+.social-icons .dropbox a     			{background-position: -240px -40px}
+.social-icons .tumblr a     			{background-position: -280px -40px}
+.social-icons .forrst a     			{background-position: -320px -40px}
+
+/**
+ * For black icons, add -100 to the second column
+ *
+ *
+ */
+ 
+.social-icons .twitter a:hover      		{background-position: 0 -200px}
+.social-icons .facebook a:hover     		{background-position: -40px -200px}
+.social-icons .dribbble a:hover 				{background-position: -80px -200px}
+.social-icons .github a:hover    				{background-position: -120px -200px}
+.social-icons .youtube a:hover    			{background-position: -160px -200px}
+.social-icons .vimeo a:hover     				{background-position: -200px -200px}
+.social-icons .neilorangepeel a:hover   {background-position: -240px -200px}
+.social-icons .instagram a:hover     		{background-position: -280px -200px}
+.social-icons .pinterest a:hover     		{background-position: -320px -200px}
+.social-icons .wordpress a:hover     		{background-position: 0 -240px}
+.social-icons .rss a:hover     					{background-position: -40px -240px}
+.social-icons .googleplus a:hover     	{background-position: -80px -240px}
+.social-icons .flickr a:hover     			{background-position: -120px -240px}
+.social-icons .linkedin a:hover     		{background-position: -160px -240px}
+.social-icons .skype a:hover     				{background-position: -200px -240px}
+.social-icons .dropbox a:hover     			{background-position: -240px -240px}
+.social-icons .tumblr a:hover     			{background-position: -280px -240px}
+.social-icons .forrst a:hover     			{background-position: -320px -240px}

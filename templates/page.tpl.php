@@ -61,7 +61,7 @@
 <!-- mcbase page.tpl.php -->
 <div class="page-wrapper"><div class="page">
 
-<header role="navigation"><div class="limiter">
+<header><div class="limiter">
 
 <?php if ($main_menu): ?>
 <p class="skip-link"><em><a href="#navigation">Skip to Navigation</a></em><!--  &darr; --></p>

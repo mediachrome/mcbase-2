@@ -54,6 +54,10 @@
 <link type="text/css" rel="stylesheet" media="all" href="<?php echo path_to_theme(); ?>/css/mcbase.ie-lt9.css" />
 </script>
 <![endif]-->
+<link rel="apple-touch-icon" href="<?php print base_path() . path_to_theme();?>/images/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php print base_path() . path_to_theme();?>/images/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php print base_path() . path_to_theme();?>/images/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php print base_path() . path_to_theme();?>/images/touch-icon-ipad-retina.png">
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width" />
