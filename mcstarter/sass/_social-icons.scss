@@ -1,0 +1,139 @@
+/* Social Icons 
+---------------------------------------------- */
+
+.social-icons {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+    margin: 5px;
+    a {
+      display: block;
+      height: 30px;
+      width: 30px;
+      text-indent: -999em;
+      background: transparent url(graphics/social-icons.png) no-repeat left top;
+    }
+  }
+  .twitter a {
+    background-position: 0 0;
+  }
+  .facebook a {
+    background-position: -40px 0;
+  }
+  .dribbble a {
+    background-position: -80px 0;
+  }
+  .github a {
+    background-position: -120px 0;
+  }
+  .youtube a {
+    background-position: -160px 0;
+  }
+  .vimeo a {
+    background-position: -200px 0;
+  }
+  .neilorangepeel a {
+    background-position: -240px 0;
+  }
+  .instagram a {
+    background-position: -280px 0;
+  }
+  .pinterest a {
+    background-position: -320px 0;
+  }
+  .wordpress a {
+    background-position: 0 -40px;
+  }
+  .rss a {
+    background-position: -40px -40px;
+  }
+  .googleplus a {
+    background-position: -80px -40px;
+  }
+  .flickr a {
+    background-position: -120px -40px;
+  }
+  .linkedin a {
+    background-position: -160px -40px;
+  }
+  .skype a {
+    background-position: -200px -40px;
+  }
+  .dropbox a {
+    background-position: -240px -40px;
+  }
+  .tumblr a {
+    background-position: -280px -40px;
+  }
+  .forrst a {
+    background-position: -320px -40px;
+  }
+  .twitter a:hover {
+    background-position: 0 -200px;
+  }
+  .facebook a:hover {
+    background-position: -40px -200px;
+  }
+  .dribbble a:hover {
+    background-position: -80px -200px;
+  }
+  .github a:hover {
+    background-position: -120px -200px;
+  }
+  .youtube a:hover {
+    background-position: -160px -200px;
+  }
+  .vimeo a:hover {
+    background-position: -200px -200px;
+  }
+  .neilorangepeel a:hover {
+    background-position: -240px -200px;
+  }
+  .instagram a:hover {
+    background-position: -280px -200px;
+  }
+  .pinterest a:hover {
+    background-position: -320px -200px;
+  }
+  .wordpress a:hover {
+    background-position: 0 -240px;
+  }
+  .rss a:hover {
+    background-position: -40px -240px;
+  }
+  .googleplus a:hover {
+    background-position: -80px -240px;
+  }
+  .flickr a:hover {
+    background-position: -120px -240px;
+  }
+  .linkedin a:hover {
+    background-position: -160px -240px;
+  }
+  .skype a:hover {
+    background-position: -200px -240px;
+  }
+  .dropbox a:hover {
+    background-position: -240px -240px;
+  }
+  .tumblr a:hover {
+    background-position: -280px -240px;
+  }
+  .forrst a:hover {
+    background-position: -320px -240px;
+  }
+}
+
+/* Grey */
+
+/**
+ * For black icons, add -100 to the second column
+ *
+ *
+ */
+

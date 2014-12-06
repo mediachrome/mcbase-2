@@ -1,4 +1,8 @@
+
 @import 'mixins';
+@import 'buttons';
+@import 'social-icons';
+
 
 input, select, textarea, body {
   font-family: 'Source Sans Pro', 'Open Sans', 'Lucida Grande', Arial, sans-serif;
@@ -193,7 +197,7 @@ strong {
     margin: 0 5px 0 0;
     padding: 0 7px 0 0;
     font-size: 0.85em;
-    &.last {
+    &:last-child {
       border-right: 0;
       margin: 0;
       padding: 0;
@@ -275,12 +279,7 @@ div.status {
   }
 }
 
-/* Views 
--------------------------------------------*/
 
-.view-content ul {
-  padding: 0;
-}
 
 /* Sidebar First
 -------------------------------------------*/
