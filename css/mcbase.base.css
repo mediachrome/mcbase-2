@@ -745,27 +745,3 @@ body .contextual-links, body .contextual-links li {
   color: #ededed;
 }
 
-/* Default floating Views 
--------------------------------------------*/
-
-.item-list-wrapper {
-  margin: 0 auto;
-}
-
-.item-list-wrapper:after {
-	  content: "";
-    display: table;
-    clear: both;
-}
-
-.item-list {
-  margin: 0 0 20px -20px;
-  padding: 0;
-  float: left;
-}
-
-.item {
-  float: left;
-  margin: 0 0 20px 20px;
-  padding: 0;
-}
