@@ -80,7 +80,7 @@ function taxonomy_node_get_terms($node, $key = 'tid') {
         $query->fields( $t_alias );
         $query->condition("r.nid", $node->nid);
         $result = $query->execute();
-        dpm($result);
+        // dpm($result);
         $terms[$node->vid][$key] = array();
         foreach ($result as $term) {
             $terms[$node->vid][$key][$term->$key] = $term;
