@@ -80,12 +80,13 @@ function taxonomy_node_get_terms($node, $key = 'tid') {
         $query->fields( $t_alias );
         $query->condition("r.nid", $node->nid);
         $result = $query->execute();
+        dpm($result);
         $terms[$node->vid][$key] = array();
         foreach ($result as $term) {
             $terms[$node->vid][$key][$term->$key] = $term;
         }
     }
-    // dpm($terms[$node->vid][$key]);
+   // dpm($terms[$node->vid][$key]);
     return $terms[$node->vid][$key];
 }
 
@@ -146,18 +147,27 @@ function mcbase_preprocess_html(&$vars) {
     drupal_add_css($child_theme_path . '/css/breakpoints.css');
   }
   
-  // Taxonomy classes for body 
-  
-  if(arg(0)=='node' && is_numeric(arg(1))) {
+   // add vocabulary name classes
+  if(arg(0) == 'taxonomy' && arg(1) == 'term') {
+    $tid = (int)arg(2);
+    $term = taxonomy_term_load($tid);
+    if(is_object($term)) {
+      $vars['classes_array'][] = 'vocabulary-'.$term->vocabulary_machine_name;
+    }
+  }
+
+  // Add Term name classes on nodes
+ if(arg(0)=='node' && is_numeric(arg(1))) {
     $node = node_load(arg(1)); 
     $results = taxonomy_node_get_terms($node);
-    // print_r($results);
+     // print_r($results);
     if(is_array($results)) {
       foreach ($results as $item) {
-        $vars['classes_array'][] = "taxonomy-".strtolower(drupal_clean_css_identifier($item->name));
+        $vars['classes_array'][] = "term-".strtolower(drupal_clean_css_identifier($item->name));
       }
     }
   }
+
 
 
   // Store the menu item since it has some useful information.
