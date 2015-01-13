@@ -199,6 +199,12 @@ function mcbase_preprocess_page(&$vars, $hook) {
     $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
   }
   
+  // generate template suggestions per vocabulary
+   if (arg(0) == 'taxonomy' && arg(1) == 'term' ) {
+    $term = taxonomy_term_load(arg(2));
+    $vocabulary = taxonomy_vocabulary_load($term->vid);
+    $variables['theme_hook_suggestions'][] = 'page__vocabulary_' . $vocabulary->machine_name;
+  }
 }
 
 
