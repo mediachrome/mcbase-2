@@ -307,7 +307,6 @@ input.teaser-button:hover,
 input[type=button]:hover,
 input#edit-preview:hover,
 input#edit-delete:hover {
-  border: 1px solid #000;
   color: #000;
 }
 
@@ -317,25 +316,14 @@ input.teaser-button:active,
 input[type=button]:active,
 input#edit-preview:active,
 input#edit-delete:active {
-  border: 1px solid #000;
   color: #000;
-  -webkit-box-shadow:rgba(0,0,0,0.5) 1px 1px 3px;
-  -moz-box-shadow:rgba(0,0,0,0.5) 1px 1px 3px;
-  box-shadow:rgba(0,0,0,0.5) 1px 1px 3px;
   position: relative;
-  top: 2px;
-  left: 2px;
 }
 
 input[disabled]:hover {
   background-color: #ededed;
-  border: 1px solid #ededed;
   color: #666;
-  top: 0;
-  left: 0;
-  -webkit-box-shadow:rgba(0,0,0,0.5) 3px 3px 3px;
-  -moz-box-shadow:rgba(0,0,0,0.5) 3px 3px 3px;
-  box-shadow:rgba(0,0,0,0.5) 3px 3px 3px;
+
 }
 
 input.form-submit,
@@ -347,16 +335,9 @@ a.button {
   color: #5a5a5a;
   text-align: center;
   font-weight: normal;
-  font-size: 1.077em;
-  border: 1px solid #e4e4e4;
-  border-bottom: 1px solid #b4b4b4;
-  border-left-color: #d2d2d2;
-  border-right-color: #d2d2d2;
-  background: url(graphics/buttons.png) 0 0 repeat-x;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  background: #bbb;
 }
+
 a.button:link,
 a.button:visited,
 a.button:hover,
