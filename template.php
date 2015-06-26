@@ -90,8 +90,37 @@ function taxonomy_node_get_terms($node, $key = 'tid') {
     return $terms[$node->vid][$key];
 }
 
+function mcbase_preprocess_page(&$vars, $hook) {
+  // Removes the enclosing tab html if there are no tabs to display
+  if (empty($vars['tabs']['#primary']) && empty($vars['tabs']['#primary'])) {
+    $vars['tabs'] = '';
+  }
+  
+  // generate template suggestions per content type
+  if (isset($vars['node']->type)) {
+    $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
+  }
+  // generate template suggestions per vocabulary
+  if(arg(0) == 'taxonomy' && arg(1) == 'term') {
+    $tid = (int)arg(2);
+    $term = taxonomy_term_load($tid);
+    if(is_object($term)) {
+      $vars['theme_hook_suggestions'][] = 'page__vocabulary__'.$term->vocabulary_machine_name;
+    }
+  }
+}
+
  
 function mcbase_preprocess_html(&$vars) {
+  
+  // generate body classes per vocabulary
+  if(arg(0) == 'taxonomy' && arg(1) == 'term') {
+    $tid = (int)arg(2);
+    $term = taxonomy_term_load($tid);
+    if(is_object($term)) {    
+      $vars['classes_array'][] = 'vocabulary-'.$term->vocabulary_machine_name;
+   }
+  }
 
 // explicitly declare the object
 // http://drupal.org/node/1065270#comment-4107538
@@ -146,15 +175,6 @@ function mcbase_preprocess_html(&$vars) {
     drupal_add_js($child_theme_path . '/js/breakpoints.js');
     drupal_add_css($child_theme_path . '/css/breakpoints.css');
   }
-  
-   // add vocabulary name classes
-  if(arg(0) == 'taxonomy' && arg(1) == 'term') {
-    $tid = (int)arg(2);
-    $term = taxonomy_term_load($tid);
-    if(is_object($term)) {
-      $vars['classes_array'][] = 'vocabulary-'.$term->vocabulary_machine_name;
-    }
-  }
 
   // Add Term name classes on nodes
  if(arg(0)=='node' && is_numeric(arg(1))) {
@@ -168,6 +188,8 @@ function mcbase_preprocess_html(&$vars) {
     }
   }
 
+  // Add theme name class to body
+  $vars['classes_array'][] = 'theme-'.$theme_key;
 
 
   // Store the menu item since it has some useful information.
@@ -183,27 +205,6 @@ function mcbase_preprocess_html(&$vars) {
       // Is this a Panels page?
       $vars['classes_array'][] = 'page-panels';
       break;
-  }
-}
-
-
-function mcbase_preprocess_page(&$vars, $hook) {
-  
-  // Removes the enclosing tab html if there are no tabs to display
-  if (empty($vars['tabs']['#primary']) && empty($vars['tabs']['#primary'])) {
-    $vars['tabs'] = '';
-  }
-  
-  // generate template suggestions per content type
-  if (isset($vars['node']->type)) {
-    $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
-  }
-  
-  // generate template suggestions per vocabulary
-   if (arg(0) == 'taxonomy' && arg(1) == 'term' ) {
-    $term = taxonomy_term_load(arg(2));
-    $vocabulary = taxonomy_vocabulary_load($term->vid);
-    $vars['theme_hook_suggestions'][] = 'page__vocabulary_' . $vocabulary->machine_name;
   }
 }
 
