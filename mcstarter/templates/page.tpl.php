@@ -183,24 +183,24 @@
 </div></div> <!-- /.limiter, /#pre-footer -->
 <?php endif; ?>
 
-<div id="footer-wrapper"><div class="limiter">
+<footer><div class="limiter">
 
-<div id="footer-first"  class="footer-block">
+<div class="footer-first"  class="footer-block">
 <?php print render($page['footer_first']); ?>
 </div>
 
-<div id="footer-second"  class="footer-block">
+<div class="footer-second"  class="footer-block">
 <?php print render($page['footer_second']); ?>
 </div>
 
-<div id="footer-third" class="footer-block clearfix">
+<div class="footer-third" class="footer-block clearfix">
 <?php print render($page['footer_third']); ?>
 </div>
 
-<footer id="footer" role="contentinfo">
+<div class="final-footer" role="contentinfo">
 <?php print render($page['footer']); ?>
-</footer> <!-- /#footer -->
+</div> <!-- /.final-footer -->
 
-</div></div> <!-- /.limiter, /#footer-wrapper -->
+</div></footer> <!-- /.limiter, /#footer-wrapper -->
 
 </div> <!-- /.page-wrapper -->
