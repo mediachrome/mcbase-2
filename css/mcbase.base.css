@@ -408,6 +408,7 @@ html.js input.throbbing {
   border-bottom: 1px solid #aaa;
   margin-bottom: -1px;
   font-size: 0.8em;
+  font-weight: bold;
 }
 
 .tabs ul.primary a {
@@ -444,6 +445,8 @@ html.js input.throbbing {
   margin: 5px 10px;
   background-color: #cdcdcd;
   padding: 3px;
+  font-size: 0.8em;
+  font-weight: bold;
   border-radius: 7px;
   border: 1px solid #cdcdcd;
 }
