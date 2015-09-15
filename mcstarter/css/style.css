@@ -426,10 +426,13 @@ div.status {
 /* Default floating Views 
 -------------------------------------------*/
 .item-list-wrapper {
-  margin: 0 auto; }
+  display: table;
+  margin: 0 auto;
+  *zoom: 1; }
+  .item-list-wrapper:before, .item-list-wrapper:after {
+    content: " ";
+    display: table; }
   .item-list-wrapper:after {
-    content: "";
-    display: table;
     clear: both; }
   .item-list-wrapper .item-list {
     margin: 0 0 20px -20px;
@@ -439,6 +442,12 @@ div.status {
       float: left;
       margin: 0 0 20px 20px;
       padding: 0; }
+      .item-list-wrapper .item-list .item .item-edit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 3px;
+        float: right; }
 
 /* Sidebar First
 -------------------------------------------*/
