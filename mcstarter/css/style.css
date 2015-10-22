@@ -219,6 +219,137 @@ input[disabled]:hover {
  *
  *
  */
+/* Navigation
+-------------------------------------------*/
+#navigation {
+  background: #fff; }
+  #navigation h2 {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); }
+
+.main-menu {
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 100%;
+  background-color: #aaa; }
+  .main-menu li {
+    float: left;
+    padding: 5px; }
+    .main-menu li a {
+      color: #000;
+      padding: 3px 5px; }
+
+#navigation .secondary-menu li {
+  padding: 5px 0; }
+  #navigation .secondary-menu li a {
+    border-right: 1px solid #999;
+    padding: 0 9px 0 10px; }
+  #navigation .secondary-menu li.first a {
+    border-left: 1px solid #999;
+    padding: 0 9px 0 9px; }
+
+.main-menu .active-trail {
+  background-color: #922; }
+  .main-menu .active-trail:hover {
+    background-color: #922; }
+.main-menu .active {
+  color: #fff; }
+  .main-menu .active:hover {
+    color: #fff; }
+
+#navigation .breadcrumb {
+  padding: 10px 20px; }
+
+/**
+ * Responsive dropdown menus override
+ *
+ * 
+ * 
+ * 
+ */
+/**
+* Menu toggle base styling
+*/
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+  height: 36px; }
+
+.menu-toggle .lines {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 4px 3px;
+  width: 36px;
+  border-radius: 3px; }
+
+.menu-toggle .toggle-help {
+  float: left;
+  height: 36px;
+  line-height: 36px; }
+
+.menu-toggle .line {
+  display: block;
+  height: 2px;
+  width: 26px;
+  margin: 5px auto 5px auto;
+  background-color: #AAA;
+  border-bottom: 1px solid #CCC; }
+
+/**
+ * Ensures in mobile our menus stack
+ */
+.responsive-menu {
+  clear: both; }
+
+.responsive-menu,
+.responsive-menu.links.inline {
+  max-height: 0;
+  overflow: hidden; }
+
+.responsive-menu.menu-toggled,
+.responsive-menu.links.inline.menu-toggled {
+  max-height: none; }
+
+.responsive-menu li,
+.responsive-menu.inline li {
+  position: relative;
+  display: block; }
+
+/**
+ * Default media query for Omega and narrow
+ */
+@media all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation: landscape) {
+  .menu-toggle {
+    display: none; }
+
+  .responsive-menu,
+  .responsive-menu.links.inline {
+    max-height: none;
+    overflow: visible; }
+
+  .responsive-menu li {
+    display: inherit; }
+
+  .responsive-menu.inline li {
+    display: inline-block; }
+
+  .responsive-menu .sub-menu {
+    position: absolute;
+    z-index: 100;
+    max-height: 0;
+    overflow: hidden; }
+
+  /* Display does not animate, max-height does. Max-weight will not animate from 0 - none, so default 900px added.
+      if your sub menu goes past 900px, well..uhh.. */
+  .responsive-menu .sub-menu.active {
+    max-height: none;
+    overflow: visible; }
+
+  /* Chances are your submenu should stack...if not override this. */
+  .responsive-menu .sub-menu li {
+    display: block; } }
 input, select, textarea, body {
   font-family: 'Source Sans Pro', 'Open Sans', 'Lucida Grande', Arial, sans-serif;
   color: #333;
@@ -306,48 +437,6 @@ strong {
   z-index: 2;
   display: block;
   content: " "; }
-
-/* Navigation
--------------------------------------------*/
-#navigation {
-  background: #fff; }
-  #navigation h2 {
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px); }
-
-.main-menu {
-  padding: 0;
-  margin: 0;
-  float: left;
-  width: 100%;
-  background-color: #aaa; }
-  .main-menu li {
-    float: left;
-    padding: 5px; }
-    .main-menu li a {
-      color: #000;
-      padding: 3px 5px; }
-
-#navigation .secondary-menu li {
-  padding: 5px 0; }
-  #navigation .secondary-menu li a {
-    border-right: 1px solid #999;
-    padding: 0 9px 0 10px; }
-  #navigation .secondary-menu li.first a {
-    border-left: 1px solid #999;
-    padding: 0 9px 0 9px; }
-
-.main-menu .active-trail {
-  background-color: #922; }
-  .main-menu .active-trail:hover {
-    background-color: #922; }
-.main-menu .active {
-  color: #fff; }
-  .main-menu .active:hover {
-    color: #fff; }
-
-#navigation .breadcrumb {
-  padding: 10px 20px; }
 
 /* User menu */
 #block-system-user-menu .content {
