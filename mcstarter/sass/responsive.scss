@@ -10,7 +10,7 @@ $phone: 30em;
 /* Leave a trail for javascript */
 
 body:after {
-  content: 'unlimited';
+  content: 'phone';
   display: none;
 }
 
@@ -41,7 +41,7 @@ body:after {
 
 @media screen and (min-width: $phone) {
   body:after {
-    content: 'phone';
+    content: 'phone plus';
     display: none;
   }
 }
