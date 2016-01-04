@@ -1,0 +1,47 @@
+/*
+Responsive Design
+------------------------------------------------------*/
+
+$widescreen: 70em;
+$desktop: 60em;
+$tablet: 50em;
+$phone: 30em;
+
+/* Leave a trail for javascript */
+
+body:after {
+  content: 'unlimited';
+  display: none;
+}
+
+@media screen and (min-width: $widescreen) {
+  body:after {
+    content: 'widescreen';
+    display: none;
+  }
+  .limiter {
+    width: $widescreen;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  body:after {
+    content: 'desktop';
+    display: none;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  body:after {
+    content: 'tablet';
+    display: none;
+  }
+}
+
+@media screen and (min-width: $phone) {
+  body:after {
+    content: 'phone';
+    display: none;
+  }
+}
