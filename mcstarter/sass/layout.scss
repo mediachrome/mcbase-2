@@ -1,7 +1,7 @@
 /**
-  * Border-box model
+  * Mobile first layout using Holy Grail 
+  * source content ordering for bigger screens
   *
-  * This will probably bite me in the ass
   */
 
 *, *:after, *:before {
@@ -86,9 +86,6 @@ html, body, #page {
     min-height: 1%;
   }
 }
-
-/* IE7 */
-
 
   #sidebar-first, #sidebar-second {
   float: none;
