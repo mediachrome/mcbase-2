@@ -2,9 +2,32 @@
 
 .maintenance-logo-block, .maintenance-panel {
   text-align: center;
-  width: 320px;
+  width: 65%;
   margin: 40px auto;
 }
+
+@media screen and (min-width: 65em) {
+  #page {
+    width: 65em;
+    margin: 0 auto;
+  }
+}
+
+.maintenance-logo-block, .maintenance-panel {
+  text-align: center;
+  width: 65%;
+  margin: 40px auto;
+}
+
+
+.maintenance-logo-block img, .maintenance-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .maintenance-logo-block #name-and-slogan, .maintenance-logo-block #site-name  {
   float: none;
