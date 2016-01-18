@@ -4,7 +4,7 @@
       
       attach: function(context, settings) {
       
-      $('body').prepend('<div id="responsive-indicator"><span class="max-1140">Max 1140</span><span class="max-960">Max 960</span><span class="max-800">Max 800</span><span class="max-768">Max 768</span><span class="max-600">Max 600</span><span class="max-480">Max 480</span><span class="max-320">Max 320</span>');
+      $('body').prepend('<div id="responsive-indicator"><span class="min-1140">Min 1140</span><span class="min-960">Min 960</span><span class="min-800">Min 800</span><span class="min-768">Min 768</span><span class="min-600">Min 600</span><span class="min-480">Min 480</span><span class="min-320">Min 320</span>');
 
    
       /**

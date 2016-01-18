@@ -59,23 +59,34 @@
  */
 ?>
 <!-- mcbase page.tpl.php -->
-<div class="page-wrapper"><div class="page">
+<div class="page-wrapper">
 
-<header><div class="limiter">
+<header class="header"><div class="limiter">
 
-<?php if ($main_menu): ?>
+<?php /* if ($main_menu): ?>
 <p class="skip-link"><em><a href="#navigation">Skip to Navigation</a></em><!--  &darr; --></p>
+<?php endif; */ ?>
+
+<?php print render($page['header_first']); ?>
+<?php print render($page['header_second']); ?>
+
+</div></header> <!-- /.section, /.header -->
+
+<?php if ($page['navigation']): ?>
+<nav id="navigation" role="navigation"><div class="limiter">
+<?php print render($page['navigation']); ?>
+<?php if ($breadcrumb): ?>
+  <div id="breadcrumb"><?php print $breadcrumb; ?></div>
 <?php endif; ?>
-
-<?php print render($page['header']); ?>
-
-</div></header> <!-- /.limiter /header -->
+</div></nav> <!-- /.limiter, /#navigation -->
+<?php endif; ?>
   
 <div class="branding" role="banner"><div class="limiter">
 
 <?php if ($logo): ?>
-<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-<img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo">
+<img src="/<?php print $directory; ?>/logo.svg" alt="<?php print t('Home'); ?>" />
+<?php /* <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> */ ?>
 </a>
 <?php endif; ?>
 
@@ -102,22 +113,7 @@
 </div> <!-- /#name-and-slogan -->
 <?php endif; ?>
    
-</div></div> <!-- /.limiter, /#branding -->
-
-<?php if ($main_menu): ?>
-
-<nav id="navigation" role="navigation"><div class="limiter">
-
-  <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible', 'menu-title'))));  ?>
-
-  <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Secondary menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
-
-<?php if ($breadcrumb): ?>
-  <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-<?php endif; ?>
-
-</div></nav> <!-- /.limiter, /#navigation -->
-<?php endif; ?>
+</div></div> <!-- /.limiter, /.branding -->
 
 <div id="main-wrapper"><div id="main" class="limiter<?php /*  if ($main_menu) { print ' with-navigation'; } */ ?>">
 
@@ -187,24 +183,24 @@
 </div></div> <!-- /.limiter, /#pre-footer -->
 <?php endif; ?>
 
-<div id="footer-wrapper"><div class="limiter">
+<footer><div class="limiter">
 
-<div id="footer-first"  class="footer-block">
+<div class="footer-first"  class="footer-block">
 <?php print render($page['footer_first']); ?>
 </div>
 
-<div id="footer-second"  class="footer-block">
+<div class="footer-second"  class="footer-block">
 <?php print render($page['footer_second']); ?>
 </div>
 
-<div id="footer-third" class="footer-block clearfix">
+<div class="footer-third" class="footer-block clearfix">
 <?php print render($page['footer_third']); ?>
 </div>
 
-<footer id="footer" role="contentinfo">
+<div class="final-footer" role="contentinfo">
 <?php print render($page['footer']); ?>
-</footer> <!-- /#footer -->
+</div> <!-- /.final-footer -->
 
-</div></div> <!-- /.limiter, /#footer-wrapper -->
+</div></footer> <!-- /.limiter, /#footer-wrapper -->
 
-</div></div> <!-- /#page, /#page-wrapper -->
+</div> <!-- /.page-wrapper -->

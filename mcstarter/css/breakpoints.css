@@ -4,7 +4,7 @@ body:after {
   display: none;
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (min-width: 1140px) {
   
   /* Leave a trail for javascript */
   body:after {
@@ -13,16 +13,16 @@ body:after {
   } 
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 960px) {
   
   /* Leave a trail for javascript */
   body:after {
-    content: 'standard';
+    content: 'desktop';
     display: none;
   } 
 }
 
-@media screen and (max-width: 780px)  {
+@media screen and (min-width: 768px)  {
 
   /* Leave a trail for javascript */
   body:after {
@@ -67,37 +67,40 @@ body:after {
   display: none;
 }
 
-@media screen and (max-width: 1140px) {
-  #responsive-indicator span.max-1140 {display: block }
+/**
+ * These spans added to the page by js/breakpoint.js */
+
+@media screen and (min-width: 1140px) {
+  #responsive-indicator span.min-1140 {display: block }
 }
 
-@media screen and (max-width: 960px) {
-  #responsive-indicator span.max-960 {display: block }
-  #responsive-indicator span.max-1140 {display: none }
+@media screen and (min-width: 960px) {
+  #responsive-indicator span.min-960 {display: block }
+  #responsive-indicator span.min-1140 {display: none }
 }
 
 @media screen and (max-width: 800px) {
-  #responsive-indicator span.max-800 {display: block }
-  #responsive-indicator span.max-960 {display: none }
+  #responsive-indicator span.min-800 {display: block }
+  #responsive-indicator span.min-960 {display: none }
 }
 
 @media screen and (max-width: 768px) {
-  #responsive-indicator span.max-768 {display: block }
-  #responsive-indicator span.max-800 {display: none }
+  #responsive-indicator span.min-768 {display: block }
+  #responsive-indicator span.min-800 {display: none }
 }
 
 @media screen and (max-width: 600px) {
-  #responsive-indicator span.max-600 {display: block }
-  #responsive-indicator span.max-768 {display: none }
+  #responsive-indicator span.min-600 {display: block }
+  #responsive-indicator span.min-768 {display: none }
 }
 
 
 @media screen and (max-width: 480px) {
-  #responsive-indicator span.max-480 {display: block }
-  #responsive-indicator span.max-600 {display: none }
+  #responsive-indicator span.min-480 {display: block }
+  #responsive-indicator span.min-600 {display: none }
 }
 
 @media screen and (max-width: 320px) {
-  #responsive-indicator span.max-320 {display: block }
-  #responsive-indicator span.max-480 {display: none }
+  #responsive-indicator span.min-320 {display: block }
+  #responsive-indicator span.min-480 {display: none }
 }

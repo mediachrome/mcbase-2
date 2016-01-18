@@ -63,14 +63,23 @@
 
 <header class="header"><div class="limiter">
 
-<?php if ($main_menu): ?>
+<?php /* if ($main_menu): ?>
 <p class="skip-link"><em><a href="#navigation">Skip to Navigation</a></em><!--  &darr; --></p>
-<?php endif; ?>
+<?php endif; */ ?>
 
 <?php print render($page['header_first']); ?>
 <?php print render($page['header_second']); ?>
 
 </div></header> <!-- /.section, /.header -->
+
+<?php if ($page['navigation']): ?>
+<nav id="navigation" role="navigation"><div class="limiter">
+<?php print render($page['navigation']); ?>
+<?php if ($breadcrumb): ?>
+  <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+<?php endif; ?>
+</div></nav> <!-- /.limiter, /#navigation -->
+<?php endif; ?>
   
 <div class="branding" role="banner"><div class="limiter">
 
@@ -105,15 +114,6 @@
 <?php endif; ?>
    
 </div></div> <!-- /.limiter, /.branding -->
-
-<?php if ($page['navigation']): ?>
-<nav id="navigation" role="navigation"><div class="limiter">
-<?php print render($page['navigation']); ?>
-<?php if ($breadcrumb): ?>
-  <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-<?php endif; ?>
-</div></nav> <!-- /.limiter, /#navigation -->
-<?php endif; ?>
 
 <div id="main-wrapper"><div id="main" class="limiter<?php /*  if ($main_menu) { print ' with-navigation'; } */ ?>">
 
