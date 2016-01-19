@@ -214,14 +214,14 @@ function mcbase_preprocess_html(&$vars) {
  *
  * From Zen
  */
-function mcbase_menu_local_tasks(&$variables) {
+function mcbase_menu_local_tasks(&$vars) {
   $output = '';
 
-  if ($primary = drupal_render($variables['primary'])) {
+  if ($primary = drupal_render($vars['primary'])) {
     $output .= '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
     $output .= '<ul class="tabs primary clearfix">' . $primary . '</ul>';
   }
-  if ($secondary = drupal_render($variables['secondary'])) {
+  if ($secondary = drupal_render($vars['secondary'])) {
     $output .= '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
     $output .= '<ul class="tabs secondary clearfix">' . $secondary . '</ul>';
   }
@@ -340,14 +340,16 @@ function mcbase_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     $form['search_block_form']['#title'] = t('Search'); // Change the text on the label element
     $form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
-    /* $form['search_block_form']['#size'] = 25; */  // define size of the textfield
-    $form['search_block_form']['#default_value'] = t('Search'); // Set a default value for the textfield
-    $form['actions']['submit']['#value'] = t('GO!'); // Change the text on the submit button
+    $form['search_block_form']['#attributes']['placeholder'] = "Search..."; // Proper HTML 5 attribute
     $form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() . path_to_theme() . '/images/search.png');
-
+    unset($form['search_block_form']['#default_value']);
+    /* $form['search_block_form']['#default_value'] = t('Search...'); // Set a default value for the textfield */
+    /* $form['search_block_form']['#size'] = 25; */  // define size of the textfield
+    /* $form['actions']['submit']['#value'] = t('GO!'); // Change the text on the submit button */
+    
 // Add extra attributes to the text box
-    $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search'; this.style.color = '#aaaaaa';}";
-    $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = ''; this.style.color = '#000000';}";
+    /* $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search'; this.style.color = '#aaaaaa';}"; */
+    /* $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = ''; this.style.color = '#000000';}"; */    
   }
 }
 

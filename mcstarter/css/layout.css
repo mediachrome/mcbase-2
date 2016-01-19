@@ -15,7 +15,7 @@ hr, .ahem, .skip-link {
   display: none; 
 }
 
-#content .region-content hr {
+hr {
   display: block; 
 }
 
@@ -137,11 +137,13 @@ html, body, #page {
   .sidebar-first #content .section {
     margin-left: 33%;
     /* LEFT value */
+    margin-right: 0;
   }
 
   .sidebar-second #content .section {
     margin-right: 33%;
     /* RIGHT value */ 
+    margin-left: 0;
   }
 
   .two-sidebars #content .section {
