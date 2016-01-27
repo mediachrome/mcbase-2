@@ -133,9 +133,9 @@ h6 a {
 .node div.codeblock {
   line-height:1.475em;
   background:#f8f8f8;
-  padding:4px 9px;
+  padding:0.3em 0.6em;
   border:1px solid #eee;
-  border-left:5px solid #eee;
+  border-left: 0.3em solid #eee;
   }
 
 .node ol li,
@@ -240,7 +240,7 @@ table {
   }
   
 th, td {
-  padding: 5px 10px;
+  padding: 0.3em 0.6em;
 }
 
 thead {
@@ -329,7 +329,7 @@ input[disabled]:hover {
 input.form-submit,
 a.button {
   cursor: pointer;
-  padding: 4px 17px;
+  padding: 0.3em 0.6em;
   margin-bottom: 1em;
   margin-right: 1em; /* LTR */
   color: #5a5a5a;
@@ -363,7 +363,7 @@ input.form-text,
 input.form-file,
 textarea.form-textarea,
 select.form-select {
-  padding: 2px;
+  padding: 0.2em;
   border: 1px solid #ccc;
   border-top-color: #999;
   background: #fff;
@@ -391,19 +391,19 @@ html.js input.throbbing {
 }
 
 .tabs ul.primary {
-  padding: 10px 10px 0;
-  margin-bottom: 5px;
+  padding: 0.6em 0.6em 0;
+  margin-bottom: 0.6emx;
   background-color: rgba(220,220,220, 0.7);
 }
 
 
 .tabs ul.primary li {
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
+  border-top-left-radius: 0.4em;
+  border-top-right-radius: 0.4em;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  padding: 1px 11px 2px;
-  margin: 5px 2px 0 0;
+  padding: 1px 0.4em 0.2em;
+  margin: 0.3em 0.2em 0 0;
   border: 1px solid #cdcdcd;
   border-bottom: 1px solid #aaa;
   margin-bottom: -1px;
@@ -442,12 +442,12 @@ html.js input.throbbing {
 }
 
 .tabs ul.secondary li {
-  margin: 5px 10px;
+  margin: 0.3em 0.6em;
   background-color: #cdcdcd;
-  padding: 3px;
+  padding: 0.2em;
   font-size: 0.8em;
   font-weight: bold;
-  border-radius: 7px;
+  border-radius: 0.4em;
   border: 1px solid #cdcdcd;
 }
 
@@ -587,7 +587,7 @@ fieldset .fieldset-legend {
   text-transform: uppercase;
   font-size: 0.85em;
   margin-top: 1em;
-  padding-left: 15px;
+  padding-left: 1em;
   position: absolute;
   top: 0;
 }
@@ -604,7 +604,7 @@ fieldset {
 }
 
 fieldset .fieldset-wrapper {
-  padding: 0 15px 10px;
+  padding: 0 1em 0.6em;
 }
 
 html.js fieldset.collapsed {
@@ -635,7 +635,7 @@ a.fieldset-title {
 /* contextual menus */
 
 body .contextual-links, body .contextual-links li {
-  font-size: 13px;
+  font-size: 0.8em;
   font-weight: normal;
   background-color: #fff;
   color: #000;
@@ -644,22 +644,19 @@ body .contextual-links, body .contextual-links li {
 /* Search Block */
 
 #search-block-form {
-	border: 1px solid #aaa;
+	border: 0.1em solid #aaa;
 	background-color: #fff;
 	padding: 0;
-	-webkit-border-radius: 13px;
-	-moz-border-radius: 13px;
-	-o-border-radius: 13px;
-	border-radius: 13px;
-  width: 200px;
+	border-radius: 1em;
+  width: 13em;
 }
 
 #search-block-form input {
 	border: 0;
 	display: inline;
-	padding: 1px 5px;
-	height: 26px;
-	line-height: 26px;
+	padding: 0.1em 0.3em;
+	height: 1.6em;
+	line-height: 1.6em;
 	margin: 0;
 	vertical-align: middle;
 }
@@ -670,8 +667,8 @@ body .contextual-links, body .contextual-links li {
 
 
 #search-block-form .form-text {
-	width: 140px;
-	margin-left: 10px;
+	width: 9em;
+	margin-left: 0.7em;
 	color: #aaaaaa;
 }
 
@@ -679,7 +676,7 @@ body .contextual-links, body .contextual-links li {
 #search-block-form .form-submit {
   background-image: none;
   background-color: transparent;
-  height: 26px;
+  height: 1.6em;
   width: auto;
   margin: 0;
   -webkit-box-shadow: none;

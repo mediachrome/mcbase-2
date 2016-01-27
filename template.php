@@ -15,6 +15,7 @@ if (theme_get_setting('mcbase_rebuild_registry') && !defined('MAINTENANCE_MODE')
 
 /**
  * Lifted from Zen, wher the code is stored in secondary .inc file
+ *
  * @file
  * Contains infrequently used theme registry build functions.
  */
