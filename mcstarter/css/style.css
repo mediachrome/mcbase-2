@@ -1,154 +1,24 @@
 /**
-  * Border-box model
-  *
-  * This will probably bite me in the ass
-  */
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* hide any HRs used in the layout, but show them in main content */
-hr, .ahem, .skip-link {
-  display: none; }
-
-hr {
-  display: block; }
-
-html, body, #page {
-  height: 100%; }
-
-/**
- * Holy Grail Layout =================================================
+ * Drupal vs Sass
  *
- * Modified from old school pre-responsive. This positions the content first
- * and sidebars second, so needs tweaking for mobile first responsive...
- *
- * ref: http://www.alistapart.com/articles/holygrail
- * This layout takes advantage of negative margins to float the sidebars to
- * either side of the main content. It also floats the navigation above the
- * content, but you could just as easily absolutely position it.
+ * Drupal includes a bunch of CSS files via the theme.info file.
+ * This is useful when debugging, because recalcitrant CSS can be
+ * easily tracked to the guilty file during development.
  * 
- * LC stands for Left Column, RC for Right Column
+ * SASS imports are cool but less easily diagnosed when there's trouble,
+ * because they're all compiled together, meaning it's difficult to spot
+ * the bad boys.
+ *
+ * Which just means you're gonna haffta copy the variable values below
+ * wherever you need them. SASS know nuffink.
  * 
- * Obvously, this layout is for left-to-right languages. For a
- * right-to-left layout, just swap all the left and rights below.
- */
-.page-wrapper, .page {
-  width: 100%;
-  margin: 0;
-  padding: 0; }
-
-.page-wrapper {
-  min-height: 100%; }
-
-/**
- * Page width limiter =================================================
+ * See layout.scss, breakpoints.css etc
  *
- * Can be nested within major structural elements to allow full-width
- * bleeds combined with a fixed page width.
- *
- * See also the dimensions defined by the responsive design requirements
  */
-.limiter {
-  margin: 0 auto; }
-  .limiter:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-/**
- * Markup free clearing.
- *
- * @see http://perishablepress.com/press/2009/12/06/new-clearfix-hack
- */
-/* IE6 */
-* html .limiter {
-  height: 1%; }
-*:first-child + html .limiter {
-  min-height: 1%; }
-
-/* IE7 */
-#sidebar-first, #sidebar-second {
-  float: none; }
-
-#main {
-  position: relative;
-  min-height: 350px; }
-
-.no-sidebars #content {
-  float: none; }
-
-/* Two columns: content with both sidebars stacked to right */
-@media screen and (min-width: 40em) {
-  #content {
-    float: left;
-    width: 100%;
-    margin-right: -100%;
-    padding: 0; }
-
-  #content .section {
-    margin-left: 0;
-    /* LEFT value */
-    margin-right: 33%;
-    /* RIGHT value */ }
-
-  #sidebar-first,
-  #sidebar-second {
-    width: 33%;
-    margin-left: -33%;
-    margin-right: 0;
-    float: right;
-    clear: right; } }
-/* Three columns: sidebar, content, sidebar */
-@media screen and (min-width: 60em) {
-  #content {
-    float: left;
-    width: 100%;
-    margin-right: -100%;
-    padding: 0; }
-
-  #sidebar-first, #sidebar-second {
-    float: left;
-    clear: none; }
-
-  .sidebar-first #content .section {
-    margin-left: 33%;
-    /* LEFT value */ }
-
-  .sidebar-second #content .section {
-    margin-right: 33%;
-    /* RIGHT value */ }
-
-  .two-sidebars #content .section {
-    margin-left: 33%;
-    /* LEFT value */
-    margin-right: 33%;
-    /* RIGHT value */ }
-
-  #sidebar-first {
-    width: 33%;
-    /* LEFT value */
-    margin-right: -33%;
-    /* negative LEFT value */
-    margin-left: 0; }
-
-  #sidebar-second {
-    width: 33%;
-    /* RIGHT value */
-    margin-left: -33%;
-    /* negative RIGHT value */
-    float: right;
-    margin-right: 0; } }
-#footer {
-  clear: both; }
-
-/* Demo regions on the blocks page */
-.page-admin-structure-block-demo .region {
-  margin: -1px;
-  border: 1px solid lime;
-  background-color: rgba(10, 255, 0, 0.4); }
-
+/* 480px */
+/* 800px */
+/* 960px */
+/* 1120px */
 /* Key Frames */
 @-webkit-keyframes fadeIn {
   from {
@@ -516,6 +386,10 @@ input, select, textarea, body {
 strong {
   font-weight: 700; }
 
+img {
+  height: auto;
+  display: block; }
+
 /* Page 
 -------------------------------------------*/
 .page-wrapper {
@@ -545,18 +419,6 @@ strong {
 
 /* Branding
 -------------------------------------------*/
-.branding .limiter {
-  padding-top: 20px;
-  padding-bottom: 20px; }
-.branding:after {
-  position: absolute;
-  width: 100%;
-  height: 16px;
-  background: transparent url(graphics/shadow-cast-down.png) repeat-x left top;
-  z-index: 2;
-  display: block;
-  content: " "; }
-
 /* User menu */
 #block-system-user-menu .content {
   text-align: right; }
@@ -580,6 +442,13 @@ strong {
       display: inline;
       float: none;
       text-decoration: none; }
+
+.logo {
+  width: 65%;
+  display: block;
+  margin: 0 auto; }
+  .logo img {
+    width: 100%; }
 
 /* Content theming 
 -------------------------------------------*/
@@ -643,12 +512,13 @@ div.status {
   .item-list-wrapper:after {
     clear: both; }
   .item-list-wrapper .item-list {
-    margin: 0 0 20px -20px;
+    margin: 0 0 20px 0;
     padding: 0;
     float: left; }
     .item-list-wrapper .item-list .item {
       float: left;
-      margin: 0 0 20px 20px;
+      width: 31%;
+      margin: 0 1% 20px 1%;
       padding: 0; }
       .item-list-wrapper .item-list .item .item-edit {
         position: absolute;
@@ -663,12 +533,5 @@ div.status {
 -------------------------------------------*/
 /* Footer
 -------------------------------------------*/
-#footer-wrapper:before {
-  height: 16px;
-  background: transparent url(graphics/shadow-cast-up.png) repeat-x left top;
-  display: block;
-  content: " ";
-  margin-top: -16px; }
-
 #footer .region {
   margin: 50px 0; }

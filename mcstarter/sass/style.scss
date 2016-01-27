@@ -1,8 +1,25 @@
+/**
+ * Drupal vs Sass
+ *
+ * Drupal includes a bunch of CSS files via the theme.info file.
+ * This is useful when debugging, because recalcitrant CSS can be
+ * easily tracked to the guilty file during development.
+ * 
+ * SASS imports are cool but less easily diagnosed when there's trouble,
+ * because they're all compiled together, meaning it's difficult to spot
+ * the bad boys.
+ *
+ * Which just means you're gonna haffta copy the variable values below
+ * wherever you need them. SASS know nuffink.
+ * 
+ * See layout.scss, breakpoints.css etc
+ *
+ */
 
-$widescreen: 70em;
-$desktop: 60em;
-$tablet: 50em;
-$phone: 30em;
+$phone: 30em;       /* 480px */
+$tablet: 50em;      /* 800px */
+$desktop: 60em;     /* 960px */
+$widescreen: 70em;  /* 1120px */
 
 @import 'mixins';
 @import 'buttons';
@@ -72,9 +89,10 @@ input, select, textarea, body {
   }
 }
 
-strong {
-  font-weight: 700;
-}
+strong { font-weight: 700; }
+
+img { height: auto; display: block; }
+
 
 /* Page 
 -------------------------------------------*/
@@ -118,22 +136,6 @@ strong {
 /* Branding
 -------------------------------------------*/
 
-.branding {
-  .limiter {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  &:after {
-    position: absolute;
-    width: 100%;
-    height: 16px;
-    background: transparent url(graphics/shadow-cast-down.png) repeat-x left top;
-    z-index: 2;
-    display: block;
-    content: " ";
-  }
-}
-
 /* User menu */
 
 #block-system-user-menu .content {
@@ -161,6 +163,15 @@ strong {
       float: none;
       text-decoration: none;
     }
+  }
+}
+
+.logo {
+  width: 65%;
+  display: block;
+  margin: 0 auto;
+  img {
+    width: 100%;
   }
 }
 
@@ -248,12 +259,13 @@ div.status {
     clear: both;
   }
  .item-list {
-    margin: 0 0 20px -20px;
+    margin: 0 0 20px 0;
     padding: 0;
     float: left;
     .item {
       float: left;
-      margin: 0 0 20px 20px;
+      width:31%;
+      margin: 0 1% 20px 1%;
       padding: 0;
       .item-edit {
          position: absolute;
@@ -275,14 +287,6 @@ div.status {
 
 /* Footer
 -------------------------------------------*/
-
-#footer-wrapper:before {
-  height: 16px;
-  background: transparent url(graphics/shadow-cast-up.png) repeat-x left top;
-  display: block;
-  content: " ";
-  margin-top: -16px;
-}
 
 #footer .region {
   margin: 50px 0;

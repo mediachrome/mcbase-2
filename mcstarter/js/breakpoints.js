@@ -4,7 +4,7 @@
       
       attach: function(context, settings) {
       
-      $('body').prepend('<div id="responsive-indicator"><span class="min-1140">Min 1140</span><span class="min-960">Min 960</span><span class="min-800">Min 800</span><span class="min-768">Min 768</span><span class="min-600">Min 600</span><span class="min-480">Min 480</span><span class="min-320">Min 320</span>');
+      $('body').prepend('<div id="responsive-indicator"><span class="min-1140">min 1140</span><span class="min-960">min 960 / max 1140</span><span class="min-800">min 800 / max 960</span><span class="min-768">min 768 / max 800</span><span class="min-600">min 600 / max 768</span><span class="min-480">min 480 / max 600</span><span class="min-320">min 320 / max 480</span>');
 
    
       /**
@@ -32,6 +32,7 @@
           if(did_resize) {
             did_resize = false;
            
+            // Define the screen width by using the variable set by breakpoint.css in body:after
             var new_size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
             // tidy up after inconsistent browsers (some include quotation marks, they shouldn't) 
             new_size = new_size.replace(/"/g, "");
@@ -46,15 +47,16 @@
               $("#navigation .limiter").remove();
               $("#navigation").html(raw_navigation);
               
-              if (new_size === 'unlimited') {}
-              
-              if (new_size === 'widescreen') {}
-              
-              if (new_size === 'standard') {}
-  
-              if (new_size === 'tablet') {}
+              // run some custom script triggered by screen size
+              // the values may need to be changed to match the values being
+              // set by breakpoint.css
               
               if (new_size === 'phone') {}
+              if (new_size === 'tablet') {}
+              if (new_size === 'standard') {}
+              if (new_size === 'widescreen') {}
+              if (new_size === 'unlimited') {}
+             
               
               current_size = new_size;
               // if we're in development mode, print this out somewhere we can see
@@ -62,7 +64,7 @@
               if ($("#responsive-indicator").length) {
               $("#responsive-indicator .current-size").remove();
               $("#responsive-indicator").append("<div class='current-size'></div>");
-              $(".current-size").html('script: ' + current_size + ' / css: ' + new_size);
+              $(".current-size").html('js: ' + current_size + ' / css: ' + new_size);
               }}
             }
           }
