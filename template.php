@@ -370,10 +370,10 @@ function mcbase_wysiwyg_editor_settings_alter(&$settings, &$context) {
  */
 
 
-function mcbase_links($variables) {
-  $links = $variables['links'];
-  $attributes = $variables['attributes'];
-  $heading = $variables['heading'];
+function mcbase_links($vars) {
+  $links = $vars['links'];
+  $attributes = $vars['attributes'];
+  $heading = $vars['heading'];
   global $language_url;
   $output = '';
 
@@ -398,29 +398,22 @@ function mcbase_links($variables) {
       }
       $output .= '>' . check_plain($heading['text']) . '</' . $heading['level'] . '>';
     }
+    
+    $output .= '<a href="#nav" title="Show navigation">Show navigation</a>';
+	$output .= '<a href="#" title="Hide navigation">Hide navigation</a>';
+
+
 
     $output .= '<ul' . drupal_attributes($attributes) . '>';
+    
 
-    $num_links = count($links);
-    $i = 1;
-    $zebra = 0; //
     foreach ($links as $key => $link) {
       $class = array($key);
 
-      // Add first, last and active classes to the list of links to help out themers.
-      if ($i == 1) {
-        $class[] = 'first';
-      }
-      if ($i == $num_links) {
-        $class[] = 'last';
-      }
       if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page()))
           && (empty($link['language']) || $link['language']->language == $language_url->language)) {
         $class[] = 'active';
       }
-      
-      $class[] = ($zebra % 2) ? 'odd' : 'even';
-      $zebra++;
 
       $output .= '<li' . drupal_attributes(array('class' => $class)) . '>';
 
@@ -440,7 +433,6 @@ function mcbase_links($variables) {
         $output .= '<span' . $span_attributes . '>' . $link['title'] . '</span>';
       }
 
-      $i++;
       $output .= "</li>\n";
     }
 
