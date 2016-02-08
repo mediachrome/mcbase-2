@@ -1,152 +1,231 @@
 /* Navigation
 -------------------------------------------*/
 
-#navigation {
-  background: #fff;
+#mainmenu {
   h2 {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
   }
 }
 
-.main-menu {
-  padding: 0;
-  margin: 0;
-  float: left;
-  width: 100%;
-  background-color: #aaa;
-  li {
-    float: left;
-    padding: 5px;
-    a {
-      color: #000;
-      padding: 3px 5px;
-    }
-  }
-}
-
-#navigation .secondary-menu li {
-  padding: 5px 0;
-  a {
-    border-right: 1px solid #999;
-    padding: 0 9px 0 10px;
-  }
-  &.first a {
-    border-left: 1px solid #999;
-    padding: 0 9px 0 9px;
-  }
-}
-
-.main-menu {
-  .active-trail {
-    background-color: #922;
-    &:hover {
-      background-color: #922;
-    }
-  }
-  .active {
-    color: #fff;
-    &:hover {
-      color: #fff;
-    }
-  }
-}
-
-#navigation .breadcrumb {
+#mainmenu .breadcrumb { 
   padding: 10px 20px;
 }
 
-/**
- * Responsive dropdown menus override
- *
- * 
- * 
- * 
- */
+/* Colours 
+------------------------------------------------- */
+
+$background: #777;
+$background-two: #444;
+$background-three: #777;
+
+$border: #444;
+$border-two: #777;
+$border-three: #777;
+
+$foreground: #fff;
+$foreground-two: #fff;
+$foreground-three: #fff;
 
 
-/**
-* Menu toggle base styling
-*/
-.menu-toggle{
-  display: block;
-  cursor: pointer;
-  height:36px;
-}
-.menu-toggle .lines {
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 4px 3px;
-  width: 36px;
-  border-radius: 3px;
-}
-.menu-toggle .toggle-help {
-  float: left;
-  height:36px;
-  line-height: 36px;
-}
-.menu-toggle .line {
-  display: block;
-  height: 2px;
-  width: 26px;
-  margin: 5px auto 5px auto;
-  background-color: #AAA;
-  border-bottom: 1px solid #CCC;
-}
-/**
- * Ensures in mobile our menus stack
- */
-.responsive-menu {
-  clear: both;
-}
-.responsive-menu,
-.responsive-menu.links.inline {
-  max-height: 0;
-  overflow:hidden;
-  }
-  .responsive-menu.menu-toggled,
-  .responsive-menu.links.inline.menu-toggled {
-    max-height: none;
-  }
-.responsive-menu li,
-.responsive-menu.inline li {
+
+/* responsive dropdown appearance 
+------------------------------------------------- */
+
+#mainmenu {
+    
   position: relative;
-  display: block;
+  
+  ul li a {
+  	padding: 0.833em;
+  	color: $foreground;
+  }
+  
+  /* First level */
+  > ul {
+		background-color: $background;
+		> li:not( :last-child ) > a {
+		  border-right: 1px solid $border;
+	  }
+  	> li:hover > a,
+  	&:not( :hover ) > li.active > a {
+  		background-color: $background-two;
+  	}
+	}
+  
+  /* Second level */
+  li ul {
+  background-color: $background-two;
+  a {
+  	border-top: 1px solid $border-two;
+  	padding: 0.75em;
+  	padding-left: 2em; 
+    }
+  li a:hover,
+	&:not( :hover ) li.active a {
+		background-color: $background;
+	  }
+  > li:not( :last-child ) > a {
+	  border-right: none;
+    border-bottom: 1px solid border;
+    }
+  }
+}
+	
+/* generate a CSS button to replace hide/show dropmenu */
+
+#mainmenu > a {
+		width: 3em;
+		height: 39px;
+		text-align: left;
+		text-indent: -9999px;
+		background-color: #777;
+		position: relative;
+		&:before,
+		&:after {
+  		position: absolute;
+  		border-top: 3px solid #fff;
+  		left: 20%;
+  		right: 20%;
+  		content: '';
+	  }
+	
+		&:before {
+  		top: 10px;
+  		border-bottom: 3px solid #fff;
+  		padding-bottom: 5px;
+  		content: '';
+    }
+      &:after {
+		top: 26px;
+	}
 }
 
-/**
- * Default media query for Omega and narrow
- */
-@media all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape) {
-  .menu-toggle {
-    display: none;
-  }
-  .responsive-menu,
-  .responsive-menu.links.inline {
-    max-height: none;
-    overflow: visible;
-  }
-  .responsive-menu li {
-    display: inherit;
-  }
-  .responsive-menu.inline li {
-    display: inline-block;
-  }
-  .responsive-menu .sub-menu {
-    position: absolute;
-    z-index: 100;
-    max-height: 0;
-    overflow: hidden;
-  }
-  /* Display does not animate, max-height does. Max-weight will not animate from 0 - none, so default 900px added.
-      if your sub menu goes past 900px, well..uhh.. */
-  .responsive-menu .sub-menu.active {
-    max-height: none;
-    overflow: visible;
-  }
-  /* Chances are your submenu should stack...if not override this. */
-  .responsive-menu .sub-menu li {
+
+/* engineering the dropdown
+------------------------------------------------- */
+
+
+#mainmenu > a {
+	display: none;
+}
+
+/* show the switch */
+#mainmenu:not( :target ) > a:first-of-type,
+#mainmenu:target > a:last-of-type {
+	display: block;
+}
+
+/* first level */
+
+#mainmenu > ul {
+	height: auto;
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+#mainmenu:target > ul {
+	display: block;
+}
+
+#mainmenu li {
+	position: relative;
+}
+
+#mainmenu li a {
+	display: block;
+}
+
+#mainmenu > ul > li > a {
+  height: 100%;
+}
+
+#mainmenu li:hover ul {
+	display: block;
+	left: 0;
+	right: 0;
+}
+
+#mainmenu li:not( :first-child ):hover ul {
+	left: -1px;
+}
+			
+/* second level */
+
+#mainmenu li ul {
+  display: none;
+	position: static;
+	padding: 0 0 1px;
+
+}
+
+/* Full horizontal dropdown on larger screens
+------------------------------------------------- */
+
+
+@media only screen and ( min-width: 40em ) {
+  
+  #mainmenu > ul{
     display: block;
   }
+  
+  /* hide the switch */
+  
+  #mainmenu:not( :target ) > a:first-of-type,
+  #mainmenu:target > a:last-of-type {
+  	display: none;
+  }
+  
+  #mainmenu li ul {
+		display: none;
+		position: absolute;
+		top: 100%;
+	}
+
+
+  #mainmenu > ul > li {
+	width: 25%;
+	height: 100%;
+	float: left;
+  }
+
+	#mainmenu > ul > li > a {
+		text-align: center;
+	}
+
+  #mainmenu li:hover ul {
+		display: block;
+		left: 0;
+		right: 0;
+	}
+  #mainmenu li:not( :first-child ):hover ul {
+		left: -1px;
+  }
 }
+  
+  #mainmenu {
+    height: 3em;
+    margin-bottom: 20px;
+  }
+  .branding {
+    clear: left;
+  }
+	
+/*
+
+// generate a CSS pop-down arrow (requires a span)
+#mainmenu span:after {
+width: 0;
+height: 0;
+border: 0.313em solid transparent;
+border-bottom: none;
+border-top-color: #efa585;
+content: '';
+vertical-align: middle;
+display: inline-block;
+position: relative;
+right: -0.313em; 
+}
+*/

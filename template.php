@@ -162,6 +162,9 @@ function mcbase_preprocess_html(&$vars) {
   // add the $settings array within the mcbase namespace to Drupal.settings
   drupal_add_js(array('mcbase' => $settings), 'setting');
   
+  // Enable double tap functionality for menu items with sub-menus.
+   drupal_add_js($path_to_mcbase . '/js/doubletaptogo.js');
+  
   // Breakpoints and overlays are site-specific. 
   // Load them from the child theme
   
@@ -361,4 +364,26 @@ function mcbase_form_alter(&$form, &$form_state, $form_id) {
  */
 function mcbase_wysiwyg_editor_settings_alter(&$settings, &$context) {
   $settings['bodyClass'] = 'wysiwygeditor';
+}
+
+/**
+ * mcbase_menu_link function.
+ *
+ * implementatiion of theme_menu_link
+ * 
+ * @param array $vars
+ * @return modified links to include
+ * aria-haspopup="true" on parent menu items
+ */
+ 
+function mcbase_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+    $element['#attributes']['aria-haspopup'] = "true";
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
