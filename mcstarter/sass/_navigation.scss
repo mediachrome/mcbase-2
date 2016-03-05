@@ -1,5 +1,6 @@
 /* Navigation
--------------------------------------------*/
+  ------------------------------------------------------ */
+
 
 #mainmenu {
   h2 {
@@ -12,8 +13,7 @@
   padding: 10px 20px;
 }
 
-/* Colours 
-------------------------------------------------- */
+/* Colours  */
 
 $background: #777;
 $background-two: #444;
@@ -29,8 +29,7 @@ $foreground-three: #fff;
 
 
 
-/* responsive dropdown appearance 
-------------------------------------------------- */
+/* responsive dropdown appearance  */
 
 #mainmenu {
     
@@ -102,8 +101,7 @@ $foreground-three: #fff;
 }
 
 
-/* engineering the dropdown
-------------------------------------------------- */
+/* engineering the dropdown */
 
 
 #mainmenu > a {
@@ -161,8 +159,7 @@ $foreground-three: #fff;
 
 }
 
-/* Full horizontal dropdown on larger screens
-------------------------------------------------- */
+/* Full horizontal dropdown on larger screens  */
 
 
 @media only screen and ( min-width: 40em ) {
