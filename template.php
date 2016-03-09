@@ -341,20 +341,27 @@ function mcbase_css_alter(&$css) {
  * @return modified form values
  */
 function mcbase_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'search_block_form') {
+  switch ($form_id) {
+    
+    // bring the search input screaming up to date
+    case 'search_block_form':
     $form['search_block_form']['#title'] = t('Search'); // Change the text on the label element
     $form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
     $form['search_block_form']['#attributes']['placeholder'] = "Search..."; // Proper HTML 5 attribute
     $form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() . path_to_theme() . '/images/search.png');
     unset($form['search_block_form']['#default_value']);
-    /* $form['search_block_form']['#default_value'] = t('Search...'); // Set a default value for the textfield */
-    /* $form['search_block_form']['#size'] = 25; */  // define size of the textfield
-    /* $form['actions']['submit']['#value'] = t('GO!'); // Change the text on the submit button */
+    break;
     
-// Add extra attributes to the text box
-    /* $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search'; this.style.color = '#aaaaaa';}"; */
-    /* $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = ''; this.style.color = '#000000';}"; */    
-  }
+    //disable browser autocomplete on password fields
+    case 'user_login_block': // Log-in block form.
+    case 'user_login': // Log-in form.
+      // Username
+      $form['name']['#attributes']['autocomplete'] = 'off';
+
+      // Password
+      $form['pass']['#attributes']['autocomplete'] = 'off';
+      break;
+  }   
 }
 
 /**
