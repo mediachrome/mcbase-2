@@ -635,7 +635,7 @@ a.fieldset-title {
 /* contextual menus */
 
 body .contextual-links, body .contextual-links li {
-  font-size: 0.8em;
+  font-size: 0.9rem; /* size shouldn't be inherited */
   font-weight: normal;
   background-color: #fff;
   color: #000;
