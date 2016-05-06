@@ -1,21 +1,9 @@
 /* Navigation
-  ------------------------------------------------------ */
-
-
-#mainmenu {
-  h2 {
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px);
-  }
-}
-
-#mainmenu .breadcrumb { 
-  padding: 10px 20px;
-}
+-------------------------------------------*/
 
 /* Colours  */
 
-$background: #777;
+$background: #222;
 $background-two: #444;
 $background-three: #777;
 
@@ -27,13 +15,54 @@ $foreground: #fff;
 $foreground-two: #fff;
 $foreground-three: #fff;
 
+#navigation {
+  background-color: $background;
+}
+
+/* Search form */
+
+#navigation {
+    #block-search-form {
+    position: absolute;
+    padding-bottom: 1px;
+    top: 10px;
+    right: 10px;
+    margin-bottom: 0;
+    z-index: 12;
+    border-radius: 1em;
+  }
+  #search-block-form {
+    border: 0;
+    background-color: #fff;
+    padding: 0;
+    border-radius: 0;
+    width: 13em;
+    input {
+      padding: 0.1em 0.3em 0;
+    }
+  }
+}
+
+#mainmenu {
+  z-index: 10;
+  h2 {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+  }
+}
+
+#mainmenu .breadcrumb { 
+  padding: 10px 20px;
+}
 
 
-/* responsive dropdown appearance  */
+/* responsive dropdown appearance 
+------------------------------------------------- */
 
 #mainmenu {
     
   position: relative;
+  margin: 0;
   
   ul li a {
   	padding: 0.833em;
@@ -71,15 +100,17 @@ $foreground-three: #fff;
   }
 }
 	
-/* generate a CSS button to replace hide/show dropmenu */
+/* generate a CSS button with pseudo elements to replace hide/show dropmenu */
 
 #mainmenu > a {
 		width: 3em;
 		height: 39px;
+		margin: 0;
+    position: relative;
 		text-align: left;
 		text-indent: -9999px;
-		background-color: #777;
-		position: relative;
+		background-color: $background;
+
 		&:before,
 		&:after {
   		position: absolute;
@@ -101,7 +132,8 @@ $foreground-three: #fff;
 }
 
 
-/* engineering the dropdown */
+/* engineering the dropdown
+------------------------------------------------- */
 
 
 #mainmenu > a {
@@ -159,13 +191,27 @@ $foreground-three: #fff;
 
 }
 
-/* Full horizontal dropdown on larger screens  */
+/* Full horizontal dropdown on larger screens
+------------------------------------------------- */
 
 
 @media only screen and ( min-width: 40em ) {
   
+  // Leave space for the search box
+  #mainmenu {
+    margin-right: 210px;
+  }
+  
   #mainmenu > ul{
     display: block;
+    position: static;
+    float: left;
+     &:after {
+    	content: "";
+    	display: table;
+    	clear: both;
+    }
+    
   }
   
   /* hide the switch */
@@ -183,7 +229,7 @@ $foreground-three: #fff;
 
 
   #mainmenu > ul > li {
-	width: 25%;
+	width: auto;
 	height: 100%;
 	float: left;
   }
@@ -201,15 +247,7 @@ $foreground-three: #fff;
 		left: -1px;
   }
 }
-  
-  #mainmenu {
-    height: 3em;
-    margin-bottom: 20px;
-  }
-  .branding {
-    clear: left;
-  }
-	
+  	
 /*
 
 // generate a CSS pop-down arrow (requires a span)

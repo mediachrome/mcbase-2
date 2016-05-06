@@ -1,30 +1,6 @@
-/**
- * Drupal vs Sass
- *
- * Drupal includes a bunch of CSS files via the theme.info file.
- * This is useful when debugging, because recalcitrant CSS can be
- * easily tracked to the guilty file during development.
- * 
- * SASS imports are cool but less easily diagnosed when there's trouble,
- * because they're all compiled together, meaning it's difficult to spot
- * the bad boys.
- *
- * Which just means you're gonna haffta copy the variable values below
- * wherever you need them. SASS know nuffink.
- * 
- * See layout.scss, breakpoints.css etc
- *
- */
-
-$phone: 30em;       /* 480px */
-$tablet: 50em;      /* 800px */
-$desktop: 60em;     /* 960px */
-$widescreen: 70em;  /* 1120px */
+@import 'variables';
 
 @import 'mixins';
-@import 'buttons';
-@import 'social-icons';
-@import 'navigation';
 
 
 input, select, textarea, body {

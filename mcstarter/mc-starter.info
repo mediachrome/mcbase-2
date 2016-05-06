@@ -9,8 +9,10 @@ screenshot = images/screenshot.png
 
 
 stylesheets[screen][] = css/layout.css
+stylesheets[screen][] = css/buttons.css
+stylesheets[screen][] = css/social-icons.css
+stylesheets[screen][] = css/navigation.css
 stylesheets[screen][] = css/style.css
-stylesheets[screen][] = css/responsive.css
 ; stylesheets[screen][] = css/better-messages.css
 stylesheets[print][] = css/print.css
 

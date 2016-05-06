@@ -17,7 +17,7 @@
  *
  */
 ?>
-<!-- thechapterhall block--system--main-menu.tpl.php -->
+<!-- mcstarter block--system--main-menu.tpl.php -->
 <?php $tag = $block->subject ? 'section' : 'div'; ?>
 <<?php print $tag; ?> id="mainmenu" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
