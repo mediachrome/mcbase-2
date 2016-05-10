@@ -54,7 +54,7 @@ features[] = main_menu
 features[] = secondary_menu
 
 ; Default theme settings
-settings[breadcrumb_display]   = yes
+settings[breadcrumb_display]   = no
 settings[breadcrumb_separator] = ' › '
 settings[breadcrumb_home]      = 1
 settings[breadcrumb_trailing]  = 1
