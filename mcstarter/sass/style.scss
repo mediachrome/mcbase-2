@@ -163,16 +163,17 @@ img { height: auto; display: block; }
   /*   border: 1px dotted #0dd; */
 }
 
+.node #page-title {
+    margin: 0 0 0.475em;
+  }
+
+
 #frontpage .node-page-page {
   margin: 0;
 }
 
 div.node-content {
   margin-bottom: 20px;
-}
-
-h1.page-title {
-  margin: 20px 0 0.5em 0;
 }
 
 .submitted {
