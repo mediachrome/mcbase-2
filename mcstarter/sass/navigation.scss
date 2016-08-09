@@ -22,6 +22,8 @@ $foreground-three: #fff;
 /* Search form */
 
 #navigation {
+   .limiter { position: relative; }
+
     #block-search-form {
     position: absolute;
     padding-bottom: 1px;
