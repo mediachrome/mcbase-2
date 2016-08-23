@@ -150,7 +150,7 @@ body:after {
 }
 
 /* Two columns: content with both sidebars stacked to right */
-@media screen and (min-width: $tablet) {
+@media screen and (min-width: $tablet) and (max-width: $desktop) {
   
   #content {
     float: left;

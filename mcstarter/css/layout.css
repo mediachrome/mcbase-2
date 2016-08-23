@@ -118,7 +118,7 @@ body:after {
   margin-right: 0; }
 
 /* Two columns: content with both sidebars stacked to right */
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 50em) and (max-width: 60em) {
   #content {
     float: left;
     width: 100%;

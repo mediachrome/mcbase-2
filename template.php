@@ -43,12 +43,18 @@ function mcbase_theme(&$existing, $type, $theme, $path) {
 }
 
 /**
- * Changes the default meta content-type tag to the shorter HTML5 version
+ * Implements hook_html_head_alter().
  */
+
 function mcbase_html_head_alter(&$head_elements) {
+  // Changes the default meta content-type tag to the shorter HTML5 version
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8'
   );
+  // Remove Generator META tag for security
+  if (isset($head_elements['system_meta_generator'])) {
+    unset($head_elements['system_meta_generator']);
+  }
 }
 
 /**
@@ -394,3 +400,5 @@ function mcbase_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+
