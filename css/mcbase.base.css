@@ -386,6 +386,12 @@ html.js input.throbbing {
 
 /* Local tasks tabs */
 
+/* Try and get some consistency for admin menus */
+body .tabs {
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
 .tabs {
   background-color: transparent;
 }
@@ -639,6 +645,15 @@ body .contextual-links, body .contextual-links li {
   font-weight: normal;
   background-color: #fff;
   color: #000;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+body .contextual-links li {
+ line-height: 100%;
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Search Block */
