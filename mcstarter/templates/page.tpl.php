@@ -185,17 +185,17 @@
 </div></div> <!-- /.limiter, /#pre-footer -->
 <?php endif; ?>
 
-<footer><div class="limiter">
+<footer class="page-footer"><div class="limiter">
 
-<div class="footer-first"  class="footer-block">
+<div class="footer-first footer-block">
 <?php print render($page['footer_first']); ?>
 </div>
 
-<div class="footer-second"  class="footer-block">
+<div class="footer-second footer-block">
 <?php print render($page['footer_second']); ?>
 </div>
 
-<div class="footer-third" class="footer-block clearfix">
+<div class="footer-third footer-block">
 <?php print render($page['footer_third']); ?>
 </div>
 
@@ -203,6 +203,6 @@
 <?php print render($page['footer']); ?>
 </div> <!-- /.final-footer -->
 
-</div></footer> <!-- /.limiter, /#footer-wrapper -->
+</div></footer> <!-- /.limiter, /.page-footer -->
 
 </div> <!-- /.page-wrapper -->
