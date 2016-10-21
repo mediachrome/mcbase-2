@@ -36,11 +36,10 @@
 #navigation #block-search-form {
   position: absolute;
   padding-bottom: 1px;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   margin-bottom: 0;
-  z-index: 12;
-  border-radius: 1em; }
+  z-index: 12; }
 #navigation #search-block-form {
   border: 0;
   background-color: #fff;
@@ -59,7 +58,7 @@
 #mainmenu .breadcrumb {
   padding: 10px 20px; }
 
-/* responsive dropdown appearance 
+/* Menu styling (mobile first) 
 ------------------------------------------------- */
 #mainmenu {
   position: relative;
@@ -110,7 +109,7 @@
   #mainmenu > a:after {
     top: 26px; }
 
-/* engineering the dropdown
+/* engineering the dropdown (mobile first)
 ------------------------------------------------- */
 #mainmenu > a {
   display: none; }
@@ -154,11 +153,15 @@
   position: static;
   padding: 0 0 1px; }
 
-/* Full horizontal dropdown on larger screens
+/* Full horizontal and dropdown on larger screens
 ------------------------------------------------- */
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 60em) {
   #mainmenu {
     margin-right: 210px; }
+
+  #navigation #block-search-form {
+    top: 10px;
+    right: 10px; }
 
   #mainmenu > ul {
     display: block;
@@ -407,10 +410,24 @@ div.status {
 -------------------------------------------*/
 /* Footer
 -------------------------------------------*/
+/* sticky footer */
+.page-wrapper {
+  position: relative;
+  padding-bottom: 10em; }
+  .page-wrapper .page-footer {
+    height: 10em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .page-wrapper .page-footer .limiter {
+      position: static; }
+
 .page-footer {
   background-color: #222; }
   .page-footer .limiter {
-    padding: 50px 0; }
+    padding: 50px 0;
+    position: static; }
 
 body .page-footer {
   color: #eee; }

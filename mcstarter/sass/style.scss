@@ -267,10 +267,26 @@ div.status {
 /* Footer
 -------------------------------------------*/
 
+/* sticky footer */
+$footer_height: 10em;
+.page-wrapper {
+  position: relative;
+  padding-bottom: $footer-height;
+  .page-footer {
+    height: $footer-height;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  .limiter { position: static; }
+  }
+}
+
 .page-footer {
   background-color: #222;
   .limiter {
     padding: 50px 0;
+    position: static;
   }
 }
 

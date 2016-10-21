@@ -27,11 +27,10 @@ $foreground-three: #fff;
     #block-search-form {
     position: absolute;
     padding-bottom: 1px;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     margin-bottom: 0;
     z-index: 12;
-    border-radius: 1em;
   }
   #search-block-form {
     border: 0;
@@ -58,7 +57,7 @@ $foreground-three: #fff;
 }
 
 
-/* responsive dropdown appearance 
+/* Menu styling (mobile first) 
 ------------------------------------------------- */
 
 #mainmenu {
@@ -134,7 +133,7 @@ $foreground-three: #fff;
 }
 
 
-/* engineering the dropdown
+/* engineering the dropdown (mobile first)
 ------------------------------------------------- */
 
 
@@ -193,17 +192,22 @@ $foreground-three: #fff;
 
 }
 
-/* Full horizontal dropdown on larger screens
+/* Full horizontal and dropdown on larger screens
 ------------------------------------------------- */
 
-
-@media only screen and ( min-width: 40em ) {
+@media only screen and ( min-width: $desktop ) {
   
   // Leave space for the search box
-  #mainmenu {
-    margin-right: 210px;
-  }
+  #mainmenu { margin-right: 210px; }
   
+  // More breathing space for the search box
+  #navigation {
+    #block-search-form {
+    top: 10px;
+    right: 10px;
+  }
+}
+
   #mainmenu > ul{
     display: block;
     position: static;
@@ -213,7 +217,6 @@ $foreground-three: #fff;
     	display: table;
     	clear: both;
     }
-    
   }
   
   /* hide the switch */
@@ -249,6 +252,7 @@ $foreground-three: #fff;
 		left: -1px;
   }
 }
+
   	
 /*
 
