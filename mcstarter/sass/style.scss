@@ -2,6 +2,8 @@
 
 @import 'mixins';
 
+@import 'navigation';
+
 
 input, select, textarea, body {
   font-family: 'Source Sans Pro', 'Open Sans', 'Lucida Grande', Arial, sans-serif;
@@ -265,6 +267,13 @@ div.status {
 /* Footer
 -------------------------------------------*/
 
-#footer .region {
-  margin: 50px 0;
+.page-footer {
+  background-color: #222;
+  .limiter {
+    padding: 50px 0;
+  }
+}
+
+body .page-footer {
+  color: #eee;
 }

@@ -24,6 +24,192 @@
     opacity: 0; }
   to {
     opacity: 1; } }
+/* Navigation
+-------------------------------------------*/
+/* Colours  */
+#navigation {
+  background-color: #222; }
+
+/* Search form */
+#navigation .limiter {
+  position: relative; }
+#navigation #block-search-form {
+  position: absolute;
+  padding-bottom: 1px;
+  top: 10px;
+  right: 10px;
+  margin-bottom: 0;
+  z-index: 12;
+  border-radius: 1em; }
+#navigation #search-block-form {
+  border: 0;
+  background-color: #fff;
+  padding: 0;
+  border-radius: 0;
+  width: 13em; }
+  #navigation #search-block-form input {
+    padding: 0.1em 0.3em 0; }
+
+#mainmenu {
+  z-index: 10; }
+  #mainmenu h2 {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); }
+
+#mainmenu .breadcrumb {
+  padding: 10px 20px; }
+
+/* responsive dropdown appearance 
+------------------------------------------------- */
+#mainmenu {
+  position: relative;
+  margin: 0;
+  /* First level */
+  /* Second level */ }
+  #mainmenu ul li a {
+    padding: 0.833em;
+    color: #fff; }
+  #mainmenu > ul {
+    background-color: #222; }
+    #mainmenu > ul > li:not(:last-child) > a {
+      border-right: 1px solid #444; }
+    #mainmenu > ul > li:hover > a, #mainmenu > ul:not(:hover) > li.active > a {
+      background-color: #444; }
+  #mainmenu li ul {
+    background-color: #444; }
+    #mainmenu li ul a {
+      border-top: 1px solid #777;
+      padding: 0.75em;
+      padding-left: 2em; }
+    #mainmenu li ul li a:hover, #mainmenu li ul:not(:hover) li.active a {
+      background-color: #222; }
+    #mainmenu li ul > li:not(:last-child) > a {
+      border-right: none;
+      border-bottom: 1px solid border; }
+
+/* generate a CSS button with pseudo elements to replace hide/show dropmenu */
+#mainmenu > a {
+  width: 3em;
+  height: 39px;
+  margin: 0;
+  position: relative;
+  text-align: left;
+  text-indent: -9999px;
+  background-color: #222; }
+  #mainmenu > a:before, #mainmenu > a:after {
+    position: absolute;
+    border-top: 3px solid #fff;
+    left: 20%;
+    right: 20%;
+    content: ''; }
+  #mainmenu > a:before {
+    top: 10px;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 5px;
+    content: ''; }
+  #mainmenu > a:after {
+    top: 26px; }
+
+/* engineering the dropdown
+------------------------------------------------- */
+#mainmenu > a {
+  display: none; }
+
+/* show the switch */
+#mainmenu:not(:target) > a:first-of-type,
+#mainmenu:target > a:last-of-type {
+  display: block; }
+
+/* first level */
+#mainmenu > ul {
+  height: auto;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+#mainmenu:target > ul {
+  display: block; }
+
+#mainmenu li {
+  position: relative; }
+
+#mainmenu li a {
+  display: block; }
+
+#mainmenu > ul > li > a {
+  height: 100%; }
+
+#mainmenu li:hover ul {
+  display: block;
+  left: 0;
+  right: 0; }
+
+#mainmenu li:not(:first-child):hover ul {
+  left: -1px; }
+
+/* second level */
+#mainmenu li ul {
+  display: none;
+  position: static;
+  padding: 0 0 1px; }
+
+/* Full horizontal dropdown on larger screens
+------------------------------------------------- */
+@media only screen and (min-width: 40em) {
+  #mainmenu {
+    margin-right: 210px; }
+
+  #mainmenu > ul {
+    display: block;
+    position: static;
+    float: left; }
+    #mainmenu > ul:after {
+      content: "";
+      display: table;
+      clear: both; }
+
+  /* hide the switch */
+  #mainmenu:not(:target) > a:first-of-type,
+  #mainmenu:target > a:last-of-type {
+    display: none; }
+
+  #mainmenu li ul {
+    display: none;
+    position: absolute;
+    top: 100%; }
+
+  #mainmenu > ul > li {
+    width: auto;
+    height: 100%;
+    float: left; }
+
+  #mainmenu > ul > li > a {
+    text-align: center; }
+
+  #mainmenu li:hover ul {
+    display: block;
+    left: 0;
+    right: 0; }
+
+  #mainmenu li:not(:first-child):hover ul {
+    left: -1px; } }
+/*
+
+// generate a CSS pop-down arrow (requires a span)
+#mainmenu span:after {
+width: 0;
+height: 0;
+border: 0.313em solid transparent;
+border-bottom: none;
+border-top-color: #efa585;
+content: '';
+vertical-align: middle;
+display: inline-block;
+position: relative;
+right: -0.313em; 
+}
+*/
 input, select, textarea, body {
   font-family: 'Source Sans Pro', 'Open Sans', 'Lucida Grande', Arial, sans-serif;
   color: #333;
@@ -148,8 +334,7 @@ img {
   /*   border: 1px dotted #0dd; */ }
 
 .node #page-title {
-    margin: 0 0 0.475em;
-  }
+  margin: 0 0 0.475em; }
 
 #frontpage .node-page-page {
   margin: 0; }
@@ -222,5 +407,10 @@ div.status {
 -------------------------------------------*/
 /* Footer
 -------------------------------------------*/
-#footer .region {
-  margin: 50px 0; }
+.page-footer {
+  background-color: #222; }
+  .page-footer .limiter {
+    padding: 50px 0; }
+
+body .page-footer {
+  color: #eee; }
