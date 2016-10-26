@@ -388,22 +388,37 @@ div.status {
     display: table; }
   .item-list-wrapper:after {
     clear: both; }
-  .item-list-wrapper .item-list {
-    margin: 0 0 20px 0;
-    padding: 0;
-    float: left; }
-    .item-list-wrapper .item-list .item {
-      float: left;
-      width: 31%;
-      margin: 0 1% 20px 1%;
-      padding: 0; }
-      .item-list-wrapper .item-list .item .item-edit {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding: 3px;
-        float: right; }
 
+.item-list {
+  margin: 0 0 20px 0;
+  padding: 0;
+  float: none; }
+  .item-list .item {
+    float: none;
+    width: 22%;
+    margin: 0 1% 20px 1%;
+    padding: 0;
+    position: relative; }
+    .item-list .item .item-edit {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 3px;
+      float: right; }
+
+@media screen and (min-width: 30em) {
+  .item-list {
+    float: left; }
+    .item-list .item {
+      float: left;
+      width: 46%; } }
+@media screen and (min-width: 50em) {
+  .item-list .item {
+    width: 31%; } }
+@media screen and (min-width: 70em) {
+  .item-list .item {
+    float: left;
+    width: 22%; } }
 /* Sidebar First
 -------------------------------------------*/
 /* Sidebar Second
@@ -431,3 +446,5 @@ div.status {
 
 body .page-footer {
   color: #eee; }
+  body .page-footer a {
+    color: inherit; }

@@ -226,6 +226,9 @@ div.status {
 /* Default floating Views 
 -------------------------------------------*/
 
+
+// Mobile first variation
+
 .item-list-wrapper {
   display: table;
   margin: 0 auto;
@@ -237,22 +240,50 @@ div.status {
   &:after {
     clear: both;
   }
- .item-list {
-    margin: 0 0 20px 0;
+}
+
+.item-list {
+  margin: 0 0 20px 0;
+  padding: 0;
+  float: none;
+  .item {
+    float: none;
+    width:22%;
+    margin: 0 1% 20px 1%;
     padding: 0;
+    position: relative;
+    .item-edit {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 3px;
+      float: right;
+    }
+  }
+}
+
+@media screen and (min-width: $phone) {
+  .item-list {
     float: left;
     .item {
       float: left;
+      width:46%;
+    }
+  }
+}
+@media screen and (min-width: $tablet) {
+  .item-list {
+    .item {
       width:31%;
-      margin: 0 1% 20px 1%;
-      padding: 0;
-      .item-edit {
-         position: absolute;
-         bottom: 0;
-         right: 0;
-         padding: 3px;
-         float: right;
-      }
+    }
+  }
+}
+
+@media screen and (min-width: $widescreen) {
+  .item-list {
+    .item {
+      float: left;
+      width:22%;
     }
   }
 }
@@ -292,4 +323,7 @@ $footer_height: 10em;
 
 body .page-footer {
   color: #eee;
+  a {
+    color: inherit;
+  }
 }
