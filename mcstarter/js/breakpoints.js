@@ -15,7 +15,7 @@
       
       if(window.getComputedStyle) {
         var dev_mode = Drupal.settings.mcbase.dev_mode;
-        alert('dev_mode = ' + dev_mode);
+        // alert('dev_mode = ' + dev_mode);
         var current_size; // defaults to blank so it's always analysed on first load
         var did_resize  = true; // defaults to true so it's always analysed on first load
         var navigation_classes = $('#navigation').attr("class"); // store the default #navigation classes
