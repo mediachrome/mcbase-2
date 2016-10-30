@@ -20,24 +20,22 @@
         var did_resize  = true; // defaults to true so it's always analysed on first load
         var navigation_classes = $('#navigation').attr("class"); // store the default #navigation classes
         var raw_navigation = $("#navigation").html(); // grab the unaltered #navigation contents and store it for simpler resets on resize
-             
+            
                 
         // on window resize, set the didResize to true and print out the viewport size
         
         $(window).resize(function() {
           did_resize = true;
-        });
-        
-        // on window resize, print the viewport size 
-        
-        // http://stackoverflow.com/questions/21042102/is-there-a-free-extension-for-safari-that-displays-the-viewport-size
-        $(window).resize(function() {
+          
+          // on window resize, print the viewport size 
+          // http://stackoverflow.com/questions/21042102/is-there-a-free-extension-for-safari-that-displays-the-viewport-size
+
           var myViewportWidth = $(window).width();
           var ems = myViewportWidth / parseFloat($("body").css("font-size"));
-          $('#mcbase-viewport').html(myViewportWidth+"px | "+ems+ "ems");
-        });
+          $('#mcbase-viewport').html(myViewportWidth+"px | "+ems+ "ems"); 
 
-        
+        });
+                
         // every 1/4 second, check if the browser was resized
         setInterval(function() {
           if(did_resize) {
@@ -80,6 +78,18 @@
             }
           }
         }, 250);
+        
+        var myViewportWidth = $(window).width();
+        
+        $(window).resize(function() {
+          // on window resize, print the viewport size 
+          // http://stackoverflow.com/questions/21042102/is-there-a-free-extension-for-safari-that-displays-the-viewport-size
+          var myViewportWidth = $(window).width(); 
+        });
+        
+        var ems = myViewportWidth / parseFloat($("body").css("font-size"));
+        $('#mcbase-viewport').html(myViewportWidth+"px | "+ems+ "ems"); 
+
       }
     }
   };

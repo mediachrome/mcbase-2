@@ -280,46 +280,42 @@ img {
 
 /* Header 
 -------------------------------------------*/
-.region-header-first {
-  width: 50%;
-  float: left; }
+@media screen and (min-width: 32em) {
+  .region-header-first {
+    width: 50%;
+    float: left; }
 
-.region-header-second {
-  width: 50%;
-  float: right; }
-
-.header .block-menu {
-  float: left;
-  margin: 0 0 10px; }
-.header #search-block-form {
-  float: right; }
+  .region-header-second {
+    width: 50%;
+    float: right; } }
+/* User menu */
+#block-system-user-menu {
+  margin-bottom: 0; }
+  #block-system-user-menu .content {
+    text-align: right; }
+    #block-system-user-menu .content ul.menu {
+      padding: 0;
+      display: inline;
+      text-align: right; }
+    #block-system-user-menu .content li {
+      display: inline;
+      float: none;
+      text-align: right;
+      border-right: 1px solid #333;
+      margin: 0 5px 0 0;
+      padding: 0 7px 0 0;
+      font-size: 0.85em; }
+      #block-system-user-menu .content li:last-child {
+        border-right: 0;
+        margin: 0;
+        padding: 0; }
+      #block-system-user-menu .content li a {
+        display: inline;
+        float: none;
+        text-decoration: none; }
 
 /* Branding
 -------------------------------------------*/
-/* User menu */
-#block-system-user-menu .content {
-  text-align: right; }
-  #block-system-user-menu .content ul.menu {
-    padding: 0;
-    display: inline;
-    text-align: right; }
-  #block-system-user-menu .content li {
-    display: inline;
-    float: none;
-    text-align: right;
-    border-right: 1px solid #333;
-    margin: 0 5px 0 0;
-    padding: 0 7px 0 0;
-    font-size: 0.85em; }
-    #block-system-user-menu .content li:last-child {
-      border-right: 0;
-      margin: 0;
-      padding: 0; }
-    #block-system-user-menu .content li a {
-      display: inline;
-      float: none;
-      text-decoration: none; }
-
 .logo {
   width: 20%;
   display: block;
@@ -406,7 +402,7 @@ div.status {
       padding: 3px;
       float: right; }
 
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 32em) {
   .item-list {
     float: left; }
     .item-list .item {

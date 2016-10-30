@@ -69,22 +69,22 @@ background-image: url(graphics/grid/grid-light.png);
 #mcbase-grid-toggle {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 18px;
   position: fixed;
-  font-size: 14px;
   z-index: 200;
   padding: 0.25em 0.5em;
   background-color: rgba(51,51,51,0.8);
   display: block;
   border-radius: 0.5em;
+  border: 1px solid rgba(255,255,255,0.3);
   outline: 0;
-  color: #ddd;
+  color: #eee;
 }
 
 #mcbase-grid-toggle {
-  bottom: 0.5em;
+  bottom: 2em;
   right: 0.5em;
-  height: 3em;
 }
 
 #mcbase-grid-toggle.grid-enabled {
@@ -94,6 +94,6 @@ background-image: url(graphics/grid/grid-light.png);
 
 #mcbase-grid-toggle.grid-disabled {
   text-decoration: none;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 

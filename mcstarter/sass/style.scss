@@ -90,59 +90,54 @@ img { height: auto; display: block; }
 /* Header 
 -------------------------------------------*/
 
-
-.region-header-first {
+@media screen and (min-width: $phone) {
+  .region-header-first {
   width: 50%;
   float: left;
-}
+  }
 
 .region-header-second {
   width: 50%;
   float: right;
+  }
 }
 
-.header {
-  .block-menu {
-    float: left;
-    margin: 0 0 10px;
-  }
-  #search-block-form {
-    float: right;
+
+/* User menu */
+
+#block-system-user-menu {
+  margin-bottom: 0;
+  .content {
+    text-align: right;
+    ul.menu {
+      padding: 0;
+      display: inline;
+      text-align: right;
+    }
+    li {
+      display: inline;
+      float: none;
+      text-align: right;
+      border-right: 1px solid #333;
+      margin: 0 5px 0 0;
+      padding: 0 7px 0 0;
+      font-size: 0.85em;
+      &:last-child {
+        border-right: 0;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        display: inline;
+        float: none;
+        text-decoration: none;
+      }
+    }
   }
 }
 
 /* Branding
 -------------------------------------------*/
-
-/* User menu */
-
-#block-system-user-menu .content {
-  text-align: right;
-  ul.menu {
-    padding: 0;
-    display: inline;
-    text-align: right;
-  }
-  li {
-    display: inline;
-    float: none;
-    text-align: right;
-    border-right: 1px solid #333;
-    margin: 0 5px 0 0;
-    padding: 0 7px 0 0;
-    font-size: 0.85em;
-    &:last-child {
-      border-right: 0;
-      margin: 0;
-      padding: 0;
-    }
-    a {
-      display: inline;
-      float: none;
-      text-decoration: none;
-    }
-  }
-}
 
 .logo {
   width: 20%;
