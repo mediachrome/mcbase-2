@@ -3,11 +3,11 @@
  * Provides sensible defaults for everything to save you time. Override
  * with an empty stylesheet to start over from scratch.
  */
- 
+
 input,
 select,
 textarea,
-body { 
+body {
   font-family: 'Lucida Grande', Arial, sans-serif;
   color: #333;
 }
@@ -59,7 +59,7 @@ ul.links.inline li a {
   float:none;
   display:inline;
 }
-  
+
 .links li a, .tabs li a {
   text-decoration: none;
   color: #333;
@@ -71,9 +71,9 @@ ul.links.inline li a {
  * Content Typography ==============================================================
  *
  */
- 
- 
- 
+
+
+
 #content .node { line-height: 1.475em; }
 
 .node p, .view p,
@@ -84,8 +84,8 @@ ul.links.inline li a {
 .node div.codeblock, .view div.codeblock,
 .node blockquote, .view blockquote,
 .node address, .view address
-{ 
-  margin: 0px 0px 1.475em; 
+{
+  margin: 0px 0px 1.475em;
 /*   margin: 0px 0px .875em;  */
 }
 
@@ -97,8 +97,8 @@ ul.links.inline li a {
 .view pre,
 .view div.codeblock,
 .view blockquote
-{ 
-  margin: 0px 0px 1.475em; 
+{
+  margin: 0px 0px 1.475em;
 /*   margin: 0px 0px .875em;  */
 }
 
@@ -107,7 +107,7 @@ ul.links.inline li a {
 .node h3,
 .node h4,
 .node h5,
-.node h6 { 
+.node h6 {
   font-weight:bold;
   margin: 0;
 }
@@ -117,7 +117,7 @@ h2 a,
 h3 a,
 h4 a,
 h5 a,
-h6 a { 
+h6 a {
   color: inherit;
   text-decoration: none;
 }
@@ -156,7 +156,7 @@ h6 a {
 .node ol ol ol, .node ol ol ol li {
   list-style: lower-roman;
   }
-  
+
 .node dt {
   font-weight: bold;
 }
@@ -166,6 +166,8 @@ h6 a {
 .node ul li { list-style:disc; }
 
 .node img { display:block; }
+
+img.file-icon { display: inline; }
 
 /* Excluding Drupal structures */
 .node .links,
@@ -194,9 +196,9 @@ div.styleguide h2,
 div.styleguide h3,
 div.styleguide h4,
 div.styleguide h5,
-div.styleguide h6 { 
+div.styleguide h6 {
   margin: 0;
-  font-weight:bold; 
+  font-weight:bold;
 }
 
 div.styleguide pre,
@@ -238,7 +240,7 @@ table {
   margin: 0 0 20px;
   border-collapse: collapse;
   }
-  
+
 th, td {
   padding: 0.3em 0.6em;
 }
@@ -489,7 +491,7 @@ body .tabs {
   clear: left;
 }
 
-#user-register .form-checkboxes, 
+#user-register .form-checkboxes,
 #node-form .form-checkboxes {
   overflow: auto;
 }
@@ -529,11 +531,11 @@ img.alignleft {
 	}
 
 /**
- * If tinymce uses this theme it will attempt to fill 
- * the body of the text editor with the body 
- * background values - must override! 
+ * If tinymce uses this theme it will attempt to fill
+ * the body of the text editor with the body
+ * background values - must override!
  */
- 
+
 body#tinymce {
   background-color: #efefef !important;
   background-image: none !important;
