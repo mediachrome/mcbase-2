@@ -80,7 +80,7 @@
 <?php endif; ?>
 </div></nav> <!-- /.limiter, /#navigation -->
 <?php endif; ?>
-  
+
 <div class="branding" role="banner"><div class="limiter">
 
 <?php if ($logo): ?>
@@ -112,7 +112,7 @@
 
 </div> <!-- /#name-and-slogan -->
 <?php endif; ?>
-   
+
 </div></div> <!-- /.limiter, /.branding -->
 
 <div id="main-wrapper"><div id="main" class="limiter<?php /*  if ($main_menu) { print ' with-navigation'; } */ ?>">
@@ -124,7 +124,7 @@
 <?php endif; ?>
 
 <div id="content" class="column" role="main"><div class="section">
-      
+
 <?php if ($page['highlighted']): ?>
 <div id="highlighted"><?php print render($page['highlighted']); ?></div>
 <?php endif; ?>
@@ -200,7 +200,7 @@
 </div>
 
 <div class="final-footer" role="contentinfo">
-<?php print render($page['footer']); ?>
+<?php print render($page['final_footer']); ?>
 </div> <!-- /.final-footer -->
 
 </div></footer> <!-- /.limiter, /.page-footer -->
