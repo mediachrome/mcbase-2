@@ -5,8 +5,8 @@
 #responsive-indicator {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8em;
+  line-height: 1.3em;
   position: fixed;
   z-index: 200;
   padding: 0.25em 0.5em;
@@ -29,7 +29,7 @@
 
 /**
  * These spans added to the page by js/breakpoint.js */
- 
+
  @media screen and (min-width: 320px) {
   #responsive-indicator span.min-320 {display: block }
 }
