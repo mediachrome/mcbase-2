@@ -17,13 +17,13 @@ input, select, textarea, body {
   }
 }
 
-/* Typography base 
+/* Typography base
 -------------------------------------------*/
 
 /**
  * Appropriate line-height is to some extent dependent on
  * font size and x height.
- * 
+ *
  * Override the default 1.475em here if required
  */
 
@@ -39,7 +39,7 @@ input, select, textarea, body {
     margin: 0px 0px 1.475em;
     /* margin: 0px 0px .875em;  */
   }
-  
+
   /* Standard preset for Term and Definition lists */
 
  dl {
@@ -48,7 +48,7 @@ input, select, textarea, body {
   &:after {
     content: "";
     display: table;
-    clear: both;  
+    clear: both;
     }
   dt {
     font-weight: 700;
@@ -72,7 +72,7 @@ strong { font-weight: 700; }
 img { height: auto; display: block; }
 
 
-/* Page 
+/* Page
 -------------------------------------------*/
 
 .page-wrapper {
@@ -87,7 +87,7 @@ img { height: auto; display: block; }
   margin-bottom: 20px;
 }
 
-/* Header 
+/* Header
 -------------------------------------------*/
 
 @media screen and (min-width: $phone) {
@@ -148,14 +148,14 @@ img { height: auto; display: block; }
   }
 }
 
-/* Content theming 
+/* Content theming
 -------------------------------------------*/
 
 #main .section {
   padding: 50px 0;
 }
 
-.region, #page-title { 
+.region, #page-title {
   margin: 0 10px;
   /*   border: 1px dotted #0dd; */
 }
@@ -218,7 +218,7 @@ div.status {
   }
 }
 
-/* Default floating Views 
+/* Default floating Views
 -------------------------------------------*/
 
 
@@ -283,6 +283,24 @@ div.status {
   }
 }
 
+/* Default Jquery Cycle slideshow
+-------------------------------------------*/
+
+
+// Responsive variation
+
+.views-slideshow-cycle-main-frame,
+.views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
+  img {
+    width: 100% !important;
+    height: auto;
+  }
+}
+
+
+
+
 
 /* Sidebar First
 -------------------------------------------*/
@@ -294,7 +312,7 @@ div.status {
 -------------------------------------------*/
 
 /* sticky footer */
-$footer_height: 10em;
+$footer_height: 20em;
 .page-wrapper {
   position: relative;
   padding-bottom: $footer-height;
@@ -321,4 +339,12 @@ body .page-footer {
   a {
     color: inherit;
   }
+}
+
+.final-footer {
+  margin-bottom: 20px;
+  p {
+    margin-bottom: 1.475em;
+  }
+  @extend %clearfix;
 }
