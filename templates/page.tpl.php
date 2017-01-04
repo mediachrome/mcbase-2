@@ -80,7 +80,7 @@
 <?php endif; ?>
 </div></nav> <!-- /.limiter, /#navigation -->
 <?php endif; ?>
-  
+
 <div class="branding" role="banner"><div class="limiter">
 
 <?php if ($logo): ?>
@@ -112,7 +112,7 @@
 
 </div> <!-- /#name-and-slogan -->
 <?php endif; ?>
-   
+
 </div></div> <!-- /.limiter, /.branding -->
 
 <div id="main-wrapper"><div id="main" class="limiter<?php /*  if ($main_menu) { print ' with-navigation'; } */ ?>">
@@ -124,7 +124,7 @@
 <?php endif; ?>
 
 <div id="content" class="column" role="main"><div class="section">
-      
+
 <?php if ($page['highlighted']): ?>
 <div id="highlighted"><?php print render($page['highlighted']); ?></div>
 <?php endif; ?>
@@ -183,24 +183,24 @@
 </div></div> <!-- /.limiter, /#pre-footer -->
 <?php endif; ?>
 
-<footer><div class="limiter">
+<footer class="page-footer"><div class="limiter">
 
-<div class="footer-first"  class="footer-block">
+<div class="footer-first footer-block">
 <?php print render($page['footer_first']); ?>
 </div>
 
-<div class="footer-second"  class="footer-block">
+<div class="footer-second footer-block">
 <?php print render($page['footer_second']); ?>
 </div>
 
-<div class="footer-third" class="footer-block clearfix">
+<div class="footer-third footer-block">
 <?php print render($page['footer_third']); ?>
 </div>
 
 <div class="final-footer" role="contentinfo">
-<?php print render($page['footer']); ?>
+<?php print render($page['final_footer']); ?>
 </div> <!-- /.final-footer -->
 
-</div></footer> <!-- /.limiter, /#footer-wrapper -->
+</div></footer> <!-- /.limiter, /.page-footer -->
 
 </div> <!-- /.page-wrapper -->

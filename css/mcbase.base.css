@@ -716,13 +716,20 @@ body .contextual-links li {
   left: 0;
 }
 
-.footer-block {
-  width: 320px;
+/* Footer block only floats on bigger screens */
+@media screen and (min-width: 480px) {
+  .footer-block {
+  width: 33.33%;
   float: left;
+  }
 }
 
-#footer .footer-block .region {
-  padding: 20px 10px;
+.footer-block .region {
+  padding: 0 10px;
+}
+
+.final-footer {
+  clear: both;
 }
 
 
