@@ -262,6 +262,15 @@ tr.even, tr.odd {
   background-color: transparent;
 }
 
+table.lined td {
+  border-bottom: 1px solid #aaa;
+}
+
+table.boxed td {
+  border: 1px solid #aaa;
+}
+
+
 /**
  * Forms ==============================================================
  */
