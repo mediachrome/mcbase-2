@@ -32,13 +32,13 @@
 
           var myViewportWidth = $(window).width();
           var ems = myViewportWidth / parseFloat($("body").css("font-size"));
-        $('#mcbase-viewport').html(myViewportWidth+"px | "+ems.toFixed(2)+ "ems");
+        $('#mcbase-viewport').html(myViewportWidth+"px | "+ems+ "ems");
 
         });
 
         var myViewportWidth = $(window).width();
           var ems = myViewportWidth / parseFloat($("body").css("font-size"));
-        $('#mcbase-viewport').html(myViewportWidth+"px | "+ems.toFixed(2)+ "ems");
+        $('#mcbase-viewport').html(myViewportWidth+"px | "+ems+ "ems");
 
 
         // every 1/4 second, check if the browser was resized
