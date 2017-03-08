@@ -250,6 +250,10 @@ thead {
   color: #fff;
 }
 
+thead a {
+  color: inherit;
+}
+
 thead th {
   border-bottom: none;
 }
