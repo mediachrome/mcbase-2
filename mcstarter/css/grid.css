@@ -89,6 +89,12 @@ background-image: url(graphics/grid/grid-light.png);
   right: 0.5em;
 }
 
+/* make the toggle the same depth as the responsive indicator */
+#mcbase-grid-toggle {
+  height: 3em;
+}
+
+
 #mcbase-grid-toggle.grid-enabled {
   text-decoration: none;
 }
