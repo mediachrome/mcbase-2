@@ -39,11 +39,13 @@
 
 <div id="page-wrapper"><div id="page">
 
-<div class="maintenance-logo-block clearfix">
 <?php if ($logo): ?>
+<div class="maintenance-logo-block clearfix">
 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+<?php /* <img src="/<?php print $directory; ?>/logo.svg" alt="<?php print t('Home'); ?>" /> */ ?>
 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
 </a>
+</div><!-- / .maintenance-logo-block -->
 <?php endif; ?>
 
 <?php if ($site_name || $site_slogan): ?>
@@ -68,7 +70,7 @@
 
 </div> <!-- /#name-and-slogan -->
 <?php endif; ?>
-</iv>
+
 
 
 <div class="maintenance-panel clearfix">
