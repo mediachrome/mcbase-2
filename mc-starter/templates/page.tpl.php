@@ -113,6 +113,10 @@
 </div> <!-- /#name-and-slogan -->
 <?php endif; ?>
 
+<?php if ($page['branding']): ?>
+<?php print render($page['branding']); ?>
+<?php endif; ?>
+
 </div></div> <!-- /.limiter, /.branding -->
 
 <div id="main-wrapper"><div id="main" class="limiter<?php /*  if ($main_menu) { print ' with-navigation'; } */ ?>">
