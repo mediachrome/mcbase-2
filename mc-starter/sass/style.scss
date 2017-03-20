@@ -56,8 +56,8 @@ input, select, textarea, body {
     clear: left;
     width: 130px;
     margin: 0 0 1em -140px;
+    &:after { content: ":";}
     }
-  &:after { content: ":";}
   dd {
     float: left;
     margin: 0 0 1em 0;

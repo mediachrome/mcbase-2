@@ -262,8 +262,8 @@ input, select, textarea, body {
       clear: left;
       width: 130px;
       margin: 0 0 1em -140px; }
-    .node dl:after {
-      content: ":"; }
+      .node dl dt:after {
+        content: ":"; }
     .node dl dd {
       float: left;
       margin: 0 0 1em 0;
