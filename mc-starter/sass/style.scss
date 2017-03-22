@@ -43,7 +43,6 @@ input, select, textarea, body {
   /* Standard preset for Term and Definition lists */
 
  dl {
-  width: 360px;
   margin-left: 140px;
   &:after {
     content: "";
@@ -62,7 +61,6 @@ input, select, textarea, body {
     float: left;
     margin: 0 0 1em 0;
     display: block;
-    width: 360px;
     }
   }
 }
@@ -243,7 +241,6 @@ div.status {
   float: none;
   .item {
     float: none;
-    width:22%;
     margin: 0 1% 20px 1%;
     padding: 0;
     position: relative;
@@ -260,9 +257,21 @@ div.status {
 @media screen and (min-width: $phone) {
   .item-list {
     float: left;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+      }
     .item {
       float: left;
       width:46%;
+    &:last-child {
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+      }
     }
   }
 }

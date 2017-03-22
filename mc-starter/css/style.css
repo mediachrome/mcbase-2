@@ -253,7 +253,6 @@ input, select, textarea, body {
     margin: 0px 0px 1.475em;
     /* margin: 0px 0px .875em;  */ }
   .node dl {
-    width: 360px;
     margin-left: 140px; }
     .node dl:after {
       content: "";
@@ -270,8 +269,7 @@ input, select, textarea, body {
     .node dl dd {
       float: left;
       margin: 0 0 1em 0;
-      display: block;
-      width: 360px; }
+      display: block; }
 
 strong {
   font-weight: 700; }
@@ -406,7 +404,6 @@ div.status {
   float: none; }
   .item-list .item {
     float: none;
-    width: 22%;
     margin: 0 1% 20px 1%;
     padding: 0;
     position: relative; }
@@ -420,9 +417,17 @@ div.status {
 @media screen and (min-width: 32em) {
   .item-list {
     float: left; }
+    .item-list:after {
+      content: "";
+      display: table;
+      clear: both; }
     .item-list .item {
       float: left;
-      width: 46%; } }
+      width: 46%; }
+      .item-list .item:last-child:after {
+        content: "";
+        display: table;
+        clear: both; } }
 
 @media screen and (min-width: 50em) {
   .item-list .item {
