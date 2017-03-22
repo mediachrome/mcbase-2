@@ -72,13 +72,14 @@
 #mainmenu .breadcrumb {
   padding: 10px 20px; }
 
-/* Menu styling (mobile first) 
+/* Menu styling (mobile first)
 ------------------------------------------------- */
 #mainmenu {
   position: relative;
   margin: 0;
   /* First level */
-  /* Second level */ }
+  /* Second level */
+  /*  Third level no thank you */ }
   #mainmenu ul li a {
     padding: 0.833em;
     color: #fff; }
@@ -101,6 +102,8 @@
     #mainmenu li ul > li:not(:last-child) > a {
       border-right: none;
       border-bottom: 1px solid border; }
+  #mainmenu > ul > li > ul > li > ul {
+    display: none !important; }
 
 /* generate a CSS button with pseudo elements to replace hide/show dropmenu */
 #mainmenu > a {
@@ -219,7 +222,7 @@ content: '';
 vertical-align: middle;
 display: inline-block;
 position: relative;
-right: -0.313em; 
+right: -0.313em;
 }
 */
 input, select, textarea, body {

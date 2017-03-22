@@ -52,24 +52,24 @@ $foreground-three: #fff;
   }
 }
 
-#mainmenu .breadcrumb { 
+#mainmenu .breadcrumb {
   padding: 10px 20px;
 }
 
 
-/* Menu styling (mobile first) 
+/* Menu styling (mobile first)
 ------------------------------------------------- */
 
 #mainmenu {
-    
+
   position: relative;
   margin: 0;
-  
+
   ul li a {
   	padding: 0.833em;
   	color: $foreground;
   }
-  
+
   /* First level */
   > ul {
 		background-color: $background;
@@ -81,14 +81,14 @@ $foreground-three: #fff;
   		background-color: $background-two;
   	}
 	}
-  
+
   /* Second level */
   li ul {
   background-color: $background-two;
   a {
   	border-top: 1px solid $border-two;
   	padding: 0.75em;
-  	padding-left: 2em; 
+  	padding-left: 2em;
     }
   li a:hover,
 	&:not( :hover ) li.active a {
@@ -99,8 +99,12 @@ $foreground-three: #fff;
     border-bottom: 1px solid border;
     }
   }
+  /*  Third level no thank you */
+  > ul > li > ul > li > ul {
+    display: none !important;
+  }
 }
-	
+
 /* generate a CSS button with pseudo elements to replace hide/show dropmenu */
 
 #mainmenu > a {
@@ -120,7 +124,7 @@ $foreground-three: #fff;
   		right: 20%;
   		content: '';
 	  }
-	
+
 		&:before {
   		top: 10px;
   		border-bottom: 3px solid #fff;
@@ -182,7 +186,7 @@ $foreground-three: #fff;
 #mainmenu li:not( :first-child ):hover ul {
 	left: -1px;
 }
-			
+
 /* second level */
 
 #mainmenu li ul {
@@ -196,10 +200,10 @@ $foreground-three: #fff;
 ------------------------------------------------- */
 
 @media only screen and ( min-width: $desktop ) {
-  
+
   // Leave space for the search box
   #mainmenu { margin-right: 210px; }
-  
+
   // More breathing space for the search box
   #navigation {
     #block-search-form {
@@ -218,14 +222,14 @@ $foreground-three: #fff;
     	clear: both;
     }
   }
-  
+
   /* hide the switch */
-  
+
   #mainmenu:not( :target ) > a:first-of-type,
   #mainmenu:target > a:last-of-type {
   	display: none;
   }
-  
+
   #mainmenu li ul {
 		display: none;
 		position: absolute;
@@ -253,7 +257,7 @@ $foreground-three: #fff;
   }
 }
 
-  	
+
 /*
 
 // generate a CSS pop-down arrow (requires a span)
@@ -267,6 +271,6 @@ content: '';
 vertical-align: middle;
 display: inline-block;
 position: relative;
-right: -0.313em; 
+right: -0.313em;
 }
 */
