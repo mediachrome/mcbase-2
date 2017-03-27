@@ -292,21 +292,34 @@ div.status {
   }
 }
 
-/* Default Jquery Cycle slideshow
+/* !Default Views Slideshow (Jquery Cycle)
 -------------------------------------------*/
 
+  // stop scaling and start cropping image at this size
+  $image-size: 800px;
 
-// Responsive variation
-
+.views_slideshow_main,
 .views-slideshow-cycle-main-frame,
-.views-slideshow-cycle-main-frame-row {
+.views-slideshow-cycle-main-frame-row,
+.views-slideshow-cycle-main-frame-row-item
+ {
+  margin: 0 auto;
   width: 100% !important;
+  }
+
+.views_slideshow_main .views-slideshow-cycle-main-frame-row-item {
+  overflow: hidden;
+  position: relative;
   img {
-    width: 100% !important;
-    height: auto;
+    width: 100%;
+    @media screen and (max-width: $image-size) {
+      min-width: $image-size;
+      // center the image
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
-
 
 
 
