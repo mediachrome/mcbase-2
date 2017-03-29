@@ -1,64 +1,37 @@
 /* !Buttons
   ------------------------------------------------------ */
-a.button {
-  background-color: #eeedbb;
-  border: 1px solid #eeedbb;
+.basic-button, a.button, input.form-submit, input.teaser-button, input[type=button] {
+  background-color: #aaa;
+  border-color: #aaa;
+  color: #222;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 2px;
   padding: 4px 12px 5px;
   margin: 10px 5px 10px 0;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  text-shadow: white 0 -1px 2px;
   font-weight: normal;
-  text-decoration: none;
-  color: #222; }
+  text-decoration: none; }
+  .basic-button:hover, a.button:hover, input.form-submit:hover, input.teaser-button:hover, input[type=button]:hover {
+    background: #777;
+    border: 1px solid #777;
+    color: #eee;
+    text-shadow: rgba(0, 0, 0, 0.8) 0 -1px 2px; }
+  .basic-button:active, a.button:active, input.form-submit:active, input.teaser-button:active, input[type=button]:active {
+    background: #222;
+    border-color: #222;
+    color: #eee;
+    text-shadow: rgba(255, 255, 255, 0.8) 0 -1px 2px; }
 
-input.form-submit, input.teaser-button, input[type=button] {
-  background-color: #eeedbb;
-  border: 1px solid #eeedbb;
-  padding: 4px 12px 5px;
-  margin: 10px 5px 10px 0;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  text-shadow: white 0 -1px 2px;
-  font-weight: normal;
-  text-decoration: none;
-  color: #222; }
-input[disabled] {
-  background-color: #ededed;
-  border: 1px solid #ededed; }
+input[disabled], input[disabled]:hover {
+  background-color: #ddd;
+  border-color: #ddd;
+  color: #777; }
 
 /* Views uses little buttons in some of its dialogues */
 #views-ajax-pad .form-buttons .form-submit {
   font-size: 0.8em;
   padding: 2px 5px; }
 
-input#edit-preview {
-  border-color: #98e893; }
-input#edit-delete, input#edit-remove {
-  border-color: #f54857; }
-input#edit-cancel {
-  border-color: #ddd; }
-
-a.button:hover {
-  border: 1px solid #eeedbb;
-  color: #000; }
-
-input.form-submit:hover, input.teaser-button:hover, input[type=button]:hover, input#edit-preview:hover, input#edit-delete:hover {
-  border: 1px solid #eeedbb;
-  color: #000; }
-
-a.button:active {
-  border: 1px solid #eeedbb;
-  color: #000; }
-
-input.form-submit:active, input.teaser-button:active, input[type=button]:active, input#edit-preview:active, input#edit-delete:active {
-  border: 1px solid #eeedbb;
-  color: #000; }
-input[disabled]:hover {
-  background-color: #ededed;
-  border: 1px solid #ededed;
-  color: #666; }
+/* These are probably defunct but I'll leave them here for now */

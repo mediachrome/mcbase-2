@@ -1,40 +1,48 @@
 /* !Buttons
   ------------------------------------------------------ */
 
-a.button {
-  background-color: #eeedbb;
-  border: 1px solid #eeedbb;
+.basic-button {
+  background-color: #aaa;
+  border-color: #aaa;
+  color: #222;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 2px;
   padding: 4px 12px 5px;
   margin: 10px 5px 10px 0;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  text-shadow: rgba(255, 255, 255, 1) 0 -1px 2px;
   font-weight: normal;
   text-decoration: none;
-  color: #222;
+  &:hover {
+    background: #777;
+    border: 1px solid #777;
+    color: #eee;
+    text-shadow: rgba(0, 0, 0, 0.8) 0 -1px 2px;
+  }
+  &:active {
+    background: #222;
+    border-color: #222;
+    color: #eee;
+    text-shadow: rgba(255, 255, 255, 0.8) 0 -1px 2px;
+  }
+}
+
+a.button {
+  @extend .basic-button;
 }
 
 input {
   &.form-submit, &.teaser-button, &[type=button] {
-    background-color: #eeedbb;
-    border: 1px solid #eeedbb;
-    padding: 4px 12px 5px;
-    margin: 10px 5px 10px 0;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -o-border-radius: 2px;
-    border-radius: 2px;
-    text-shadow: rgba(255, 255, 255, 1) 0 -1px 2px;
-    font-weight: normal;
-    text-decoration: none;
-    color: #222;
+    @extend .basic-button;
   }
-  &[disabled] {
-    background-color: #ededed;
-    border: 1px solid #ededed;
+  &[disabled],  &[disabled]:hover {
+    background-color: #ddd;
+    border-color: #ddd;
+    color: #777;
+
   }
+
 }
 
 /* Views uses little buttons in some of its dialogues */
@@ -44,43 +52,10 @@ input {
   padding: 2px 5px;
 }
 
+/* These are probably defunct but I'll leave them here for now */
 input {
-  &#edit-preview {
-    border-color: #98e893;
-  }
-  &#edit-delete, &#edit-remove {
-    border-color: #f54857;
-  }
-  &#edit-cancel {
-    border-color: #ddd;
-  }
+  &#edit-preview { }
+  &#edit-delete, &#edit-remove { }
+  &#edit-cancel { }
 }
 
-a.button:hover {
-  border: 1px solid #eeedbb;
-  color: #000;
-}
-
-input {
-  &.form-submit:hover, &.teaser-button:hover, &[type=button]:hover, &#edit-preview:hover, &#edit-delete:hover {
-    border: 1px solid #eeedbb;
-    color: #000;
-  }
-}
-
-a.button:active {
-  border: 1px solid #eeedbb;
-  color: #000;
-}
-
-input {
-  &.form-submit:active, &.teaser-button:active, &[type=button]:active, &#edit-preview:active, &#edit-delete:active {
-    border: 1px solid #eeedbb;
-    color: #000;
-  }
-  &[disabled]:hover {
-    background-color: #ededed;
-    border: 1px solid #ededed;
-    color: #666;
-  }
-}
