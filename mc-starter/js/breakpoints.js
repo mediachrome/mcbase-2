@@ -32,12 +32,14 @@
 
           var myViewportWidth = $(window).width();
           var ems = myViewportWidth / parseFloat($("body").css("font-size"));
+          ems = Math.round(ems*100)/100; // two decimal places
         $('#mcbase-viewport').html(myViewportWidth+"px | "+ems+ "ems");
 
         });
 
         var myViewportWidth = $(window).width();
           var ems = myViewportWidth / parseFloat($("body").css("font-size"));
+          ems = Math.round(ems*100)/100; // two decimal places
         $('#mcbase-viewport').html(myViewportWidth+"px | "+ems+ "ems");
 
 
