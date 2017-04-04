@@ -1,0 +1,93 @@
+/* !Toboggan login
+---------------------------------------------- */
+$form-background: transparent;
+$tab-background: rgba(100, 100, 100, 0.7);
+$tab-color: #000;
+$border: 1px solid #666;
+
+$hover-tab-background: #000;
+$hover-tab-color: #eeedbb;
+
+$active-tab-background: #000;
+$active-tab-color: #eeedbb;
+
+$form-text-color: #999;
+
+
+.toboggan-unified {
+  #login-message {
+    text-align: center;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+  }
+  #login-links {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.1em;
+    margin-bottom: 0;
+    border-bottom: 1px solid #666;
+    &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    .login-link {
+      padding: 16px 0;
+      margin-bottom: -1px;
+      background-color: $tab-background;
+      width: 50%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      display: block;
+      text-decoration: none;
+      color: $tab-color;
+      text-transform: uppercase;
+      font-size: 1.2em;
+    }
+  }
+  #login-link {
+    float: left;
+    border: $border;
+  }
+  #register-link {
+    float: right;
+    border: $border;
+  }
+  #login-links a {
+    &:hover {
+      background-color: $hover-tab-background;
+      color: $hover-tab-color;
+    }
+    &.lt-active {
+      background-color: $active-tab-background;
+      border: $border;
+      color: $active-tab-color;
+      border-bottom: 1px $active-tab-background solid;
+      &:hover {
+        background-color:$active-tab-background;
+        border: $border;
+        color: $active-tab-color;
+        border-bottom: 1px $active-tab-background solid;
+      }
+    }
+  }
+}
+
+#login-form, #register-form {
+  border: $border;
+  margin-top: 0;
+  background-color: $form-background;
+  padding: 10px 20px;
+  border-top: 0;
+  font-size: 1.2em;
+}
+
+#login-form .description, #register-form .description {
+  color: $form-text-color;
+}
+
+#login-form input, #register-form input {
+  margin: 5px 0;
+}
