@@ -1,0 +1,26 @@
+/*Ridiculously Responsive Social Share Buttons
+-------------------------------------------*/
+
+// Override Mcbase node li styling
+
+.node {
+  .rrssb {
+    font-size:14px;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  ul.rrssb-buttons {
+    box-sizing:border-box;
+    display:inline-block;
+    margin:0.15em 0;
+    padding:0;
+    width:100%;
+    li {
+      list-style: none;
+      box-sizing:border-box;
+      display:inline-block;
+      padding:0.15em;
+      margin: 0;
+    }
+  }
+}
+

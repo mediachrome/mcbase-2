@@ -225,6 +225,25 @@ position: relative;
 right: -0.313em;
 }
 */
+/*Ridiculously Responsive Social Share Buttons
+-------------------------------------------*/
+.node .rrssb {
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.node ul.rrssb-buttons {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0.15em 0;
+  padding: 0;
+  width: 100%; }
+  .node ul.rrssb-buttons li {
+    list-style: none;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0.15em;
+    margin: 0; }
+
 input, select, textarea, body {
   font-family: 'Source Sans Pro', 'Open Sans', 'Lucida Grande', Arial, sans-serif;
   color: #333;
