@@ -730,7 +730,7 @@ body .contextual-links li {
 }
 
 /* Footer block only floats on bigger screens */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 40em) {
   .footer-block {
   width: 33.33%;
   float: left;
