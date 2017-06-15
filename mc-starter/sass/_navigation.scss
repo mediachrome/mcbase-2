@@ -85,6 +85,7 @@ $foreground-three: #fff;
   /* Second level */
   li ul {
   background-color: $background-two;
+  width: 20em;
   a {
   	border-top: 1px solid $border-two;
   	padding: 0.75em;

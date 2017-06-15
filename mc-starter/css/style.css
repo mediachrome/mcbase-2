@@ -91,7 +91,8 @@
     #mainmenu > ul:not(:hover) > li.active > a {
       background-color: #444; }
   #mainmenu li ul {
-    background-color: #444; }
+    background-color: #444;
+    width: 20em; }
     #mainmenu li ul a {
       border-top: 1px solid #777;
       padding: 0.75em;
@@ -342,16 +343,20 @@ img {
       #block-system-user-menu .content li a {
         display: inline;
         float: none;
-        text-decoration: none; }
+        text-decoration: none;
+        color: inherit; }
 
 /* Branding
 -------------------------------------------*/
 .logo {
-  width: 20%;
+  width: 40%;
   display: block;
   margin: 0 auto; }
   .logo img {
     width: 100%; }
+  @media screen and (min-width: 50em) {
+    .logo {
+      width: 20%; } }
 
 /* Content theming
 -------------------------------------------*/
@@ -379,19 +384,28 @@ div.node-webform-page form {
   padding: 10px;
   background-color: #ddebf3; }
 
-/* Images */
-img.full-width {
+/* Inline images via insert */
+img.image-full_width {
   display: block;
   float: none;
-  margin: 0 auto 10px; }
+  margin: 0 auto 10px;
+  width: 100%; }
 
-img.half-width-left {
-  float: left;
-  margin: 0 10px 10px 0; }
+img.image-half_width_left {
+  width: 100%; }
+  @media screen and (min-width: 32em) {
+    img.image-half_width_left {
+      width: 45%;
+      float: left;
+      margin: 0 10px 10px 0; } }
 
-img.half-width-right {
-  float: right;
-  margin: 0 0 10px 10px; }
+img.image-half_width_right {
+  width: 100%; }
+  @media screen and (min-width: 32em) {
+    img.image-half_width_right {
+      width: 45%;
+      float: right;
+      margin: 0 0 10px 10px; } }
 
 div.status {
   background-color: #fff; }

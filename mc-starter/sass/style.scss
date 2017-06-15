@@ -131,6 +131,7 @@ img { height: auto; display: block; }
         display: inline;
         float: none;
         text-decoration: none;
+        color: inherit;
       }
     }
   }
@@ -140,11 +141,14 @@ img { height: auto; display: block; }
 -------------------------------------------*/
 
 .logo {
-  width: 20%;
+  width: 40%;
   display: block;
   margin: 0 auto;
   img {
     width: 100%;
+  }
+  @media screen and (min-width: $tablet) {
+  width: 20%;
   }
 }
 
@@ -184,23 +188,33 @@ div.node-webform-page form {
   background-color: #ddebf3;
 }
 
-/* Images */
+/* Inline images via insert */
 
 img {
-  &.full-width {
+  &.image-full_width {
     display: block;
     float: none;
     margin: 0 auto 10px;
+    width: 100%;
   }
-  &.half-width-left {
-    float: left;
-    margin: 0 10px 10px 0;
+  &.image-half_width_left {
+    width: 100%;
+    @media screen and (min-width: $phone) {
+      width: 45%;
+      float: left;
+      margin: 0 10px 10px 0;
+    }
   }
-  &.half-width-right {
-    float: right;
-    margin: 0 0 10px 10px;
+  &.image-half_width_right {
+    width: 100%;
+    @media screen and (min-width: $phone) {
+      width: 45%;
+      float: right;
+      margin: 0 0 10px 10px;
+    }
   }
 }
+
 
 div.status {
   background-color: #fff;
