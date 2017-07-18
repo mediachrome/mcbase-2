@@ -250,7 +250,7 @@ thead {
   color: #fff;
 }
 
-thead a {
+thead a, thead th a {
   color: inherit;
 }
 
