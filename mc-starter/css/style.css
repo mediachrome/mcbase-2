@@ -291,6 +291,11 @@ input, select, textarea, body {
       margin: 0 0 1em 0;
       display: block; }
 
+h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #777; }
+
 strong {
   font-weight: 700; }
 

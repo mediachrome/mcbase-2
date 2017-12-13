@@ -138,6 +138,8 @@ h6 a {
   border-left: 0.3em solid #eee;
   }
 
+.taxonomy-term ol li,
+.taxonomy-term ul li,
 .node ol li,
 .node ul li {
   display:list-item;
@@ -145,15 +147,24 @@ h6 a {
   padding:0px;
   }
 
-.node ol, .node ol li {
+.taxonomy-term ol,
+.taxonomy-term ol li,
+.node ol,
+.node ol li {
   list-style: decimal;
   }
 
-.node ol ol, .node ol ol li {
+.taxonomy-term ol ol,
+.taxonomy-term ol ol li,
+.node ol ol,
+.node ol ol li {
   list-style: lower-latin;
   }
 
-.node ol ol ol, .node ol ol ol li {
+.taxonomy-term ol ol ol,
+.taxonomy-term ol ol ol li,
+.node ol ol ol,
+.node ol ol ol li {
   list-style: lower-roman;
   }
 
