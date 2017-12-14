@@ -76,27 +76,14 @@ ul.links.inline li a {
 
 #content .node { line-height: 1.475em; }
 
-.node p, .view p,
-.node ul, .view ul,
-.node ol, .view ol,
-.node dl, .view dl,
-.node pre, .view pre,
-.node div.codeblock, .view div.codeblock,
-.node blockquote, .view blockquote,
-.node address, .view address
-{
-  margin: 0px 0px 1.475em;
-/*   margin: 0px 0px .875em;  */
-}
-
-/* Views displaying body content */
-.view p,
-.view ul,
-.view ol,
-.view dl,
-.view pre,
-.view div.codeblock,
-.view blockquote
+.taxonomy-term p, .node p, .view p,
+.taxonomy-term ul, .node ul, .view ul,
+.taxonomy-term ol, .node ol, .view ol,
+.taxonomy-term dl, .node dl, .view dl,
+.taxonomy-term pre, .node pre, .view pre,
+.taxonomy-term .codeblock, .node div.codeblock, .view div.codeblock,
+.taxonomy-term blockquote, .node blockquote, .view blockquote,
+.taxonomy-term address, .node address, .view address
 {
   margin: 0px 0px 1.475em;
 /*   margin: 0px 0px .875em;  */
@@ -172,9 +159,9 @@ h6 a {
   font-weight: bold;
 }
 
-.node ol li { list-style:decimal; }
+.taxonomy-term ol li, .node ol li { list-style:decimal; }
 
-.node ul li { list-style:disc; }
+.taxonomy-term ul li, .node ul li { list-style:disc; }
 
 .node img { display:block; }
 
