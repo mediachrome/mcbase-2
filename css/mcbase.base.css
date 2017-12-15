@@ -89,12 +89,7 @@ ul.links.inline li a {
 /*   margin: 0px 0px .875em;  */
 }
 
-.node h1,
-.node h2,
-.node h3,
-.node h4,
-.node h5,
-.node h6 {
+h1,h2,h3,h4,h5,h6 {
   font-weight:bold;
   margin: 0;
 }

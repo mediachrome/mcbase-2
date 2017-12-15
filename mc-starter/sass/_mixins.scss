@@ -14,8 +14,24 @@
   }
 }
 
+// usage @include tint-overlay(0,0,0,0.5)
+
+@mixin tint-overlay($red,$green,$blue,$opacity) {
+  position: relative;
+  &:before {
+    position: absolute;
+    display: block;
+    content: " ";
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($red,$green,$blue,$opacity);
+  }
+}
+
 @mixin fade-in($time, $delay) {
-       
+
         opacity:0;
         -webkit-animation:fadeIn ease-in 1;
         -moz-animation:fadeIn ease-in 1;
