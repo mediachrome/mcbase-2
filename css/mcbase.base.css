@@ -289,8 +289,31 @@ input.form-checkbox { vertical-align:middle; }
 /*   font-size:11px; */
   }
 
+/**
+ * Collapsible fieldsets.
+ *
+ * @see collapse.js
+ */
+html.js fieldset.collapsible .fieldset-legend {
+  background: url(graphics/arrow-down.svg) 0 90% no-repeat; /* LTR */
+}
+html.js fieldset.collapsed .fieldset-legend {
+  background-image: url(graphics/arrow-right.svg); /* LTR */
+}
+
+html.js fieldset.collapsible .fieldset-legend,
+html.js fieldset.collapsible .fieldset-wrapper {
+  padding-left: 1.4em;
+}
+
+.fieldset-legend span.summary {
+  color: #999;
+  font-size: 0.9em;
+  margin-left: 0.5em;
+}
 fieldset.collapsible .fieldset-title { cursor:pointer; }
 html.js fieldset.collapsed .fieldset-content { display:none; }
+
 
 /**
  * Views ==============================================================
